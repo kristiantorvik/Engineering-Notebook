@@ -1,6 +1,6 @@
 site_name: Engineering Notebook
 site_description: Personal technical reference — formulas, notes, calculators, and reference data.
-site_url: "https://CHANGEME.pages.dev"  # update after Cloudflare Pages project is created
+site_url: "https://engineering-notebook.kristiantorvik.workers.dev"
 
 docs_dir: docs
 site_dir: site
