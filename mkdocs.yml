@@ -1,0 +1,78 @@
+site_name: Engineering Notebook
+site_description: Personal technical reference — formulas, notes, calculators, and reference data.
+site_url: "https://CHANGEME.pages.dev"  # update after Cloudflare Pages project is created
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    scheme: slate
+    primary: blue
+    accent: light blue
+  font:
+    text: Roboto Mono
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+hooks:
+  - app/hooks.py
+
+plugins:
+  - search
+  - tags
+  - callouts
+
+markdown_extensions:
+  - nl2br                        # single newline → <br>, like Obsidian
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.mark               # ==highlight==
+  - pymdownx.tilde              # ~~strikethrough~~
+  - pymdownx.tasklist:          # - [ ] checkboxes
+      custom_checkbox: true
+  - attr_list
+  - def_list
+  - md_in_html                    # markdown inside HTML blocks via markdown="1"
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Heim: index.md
+  - Notater:
+      - notes/index.md
+      - Knekking / Buckling: notes/knekking.md
+      - O-ring Design: notes/O-ring-design.md
+      - Presspassninger og tykkvegga rør: notes/presspassninger-og-tykkvegga-rør.md
+      - Nyttige nettsider: notes/nyttige-nettsider.md
+  - Formler:
+      - formulas/index.md
+      - Geometrisk slankhet: formulas/geometrisk-slankhet.md
+      - Normalisert slankhet: formulas/normalisert-slankhet.md
+      - Skruemoment: formulas/skruemoment.md
+  - Kalkulatorer:
+      - calculators/index.md
+      - Press-Fit Calculator: calculators/press-fit-calculator.md
+  - Referanse-data:
+      - reference/index.md
+      - Friksjon — bolter og skruer: reference/friksjon-bolter-skruer.md

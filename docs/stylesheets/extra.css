@@ -1,0 +1,252 @@
+/* ── Engineering Notebook — extra styles ─────────────────────────── */
+
+/* ── Type badge colours ─────────────────────────────────────────── */
+:root {
+  --nb-type-note:    #4a90d9;
+  --nb-type-formula: #7b5ea7;
+  --nb-type-calc:    #3a9e6e;
+  --nb-type-ref:     #b07d3a;
+}
+
+/* ── Home page search / filter UI ───────────────────────────────── */
+
+#nb-search-ui {
+  margin-top: 1.5rem;
+}
+
+.nb-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.nb-search-input {
+  flex: 1 1 220px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-family: var(--md-code-font-family);
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  outline: none;
+}
+
+.nb-search-input:focus {
+  border-color: var(--md-primary-fg-color);
+}
+
+.nb-type-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.nb-type-btn {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.82rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.nb-type-btn:hover {
+  border-color: var(--md-primary-fg-color);
+  color: var(--md-default-fg-color);
+}
+
+.nb-type-btn.active {
+  background: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+/* Tag chips */
+.nb-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.nb-tag-chip {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.nb-tag-chip:hover {
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-default-fg-color);
+}
+
+.nb-tag-chip.active {
+  background: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-default-fg-color);
+}
+
+/* Result count */
+.nb-count {
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.75rem;
+}
+
+/* Card grid */
+.nb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.85rem;
+}
+
+.nb-loading {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+}
+
+/* Individual card */
+a.nb-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 5px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+a.nb-card:hover {
+  border-color: var(--md-primary-fg-color);
+  background: var(--md-code-bg-color);
+}
+
+.nb-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.nb-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nb-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+
+.nb-card-summary {
+  font-size: 0.82rem;
+  color: var(--md-default-fg-color--light);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.nb-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
+}
+
+.nb-card-tag {
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+  background: var(--md-code-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  padding: 0.1rem 0.45rem;
+}
+
+/* Search match highlight */
+mark.nb-hl {
+  background: rgba(255, 200, 0, 0.3);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+/* Tighten up formula variable tables */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  padding: 0.35em 0.75em;
+}
+
+/* Give admonition blocks a slightly smaller font */
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 0.9rem;
+}
+
+/* Calculator card layout */
+.calc-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0;
+}
+
+.calc-card label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.calc-card input[type="number"] {
+  width: 100%;
+  max-width: 240px;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  font-family: var(--md-code-font-family);
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 3px;
+  margin-bottom: 0.75rem;
+}
+
+.calc-card .calc-result {
+  font-size: 1.4rem;
+  font-family: var(--md-code-font-family);
+  color: var(--md-accent-fg-color);
+  margin-top: 0.5rem;
+}
+
+.calc-card button {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  border: none;
+  border-radius: 3px;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 0.25rem;
+}
+
+.calc-card button:hover {
+  opacity: 0.85;
+}
