@@ -73,6 +73,7 @@ nav:
       - Effekbehov deplasemangsskrog: formulas/effektbehov-deplasementsskrog.md
       - Effekbehov halvplanende skrog: formulas/effektbehov-halvplanende-skrog.md
       - Effekbehov planende skrog: formulas/effektbehov-planende-skrog.md
+      - Tau friksjon: formulas/tau-friksjon.md
   - Kalkulatorer:
       - calculators/index.md
       - Press-Fit Calculator: calculators/press-fit-calculator.md
