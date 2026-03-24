@@ -70,9 +70,15 @@ nav:
       - Geometrisk slankhet: formulas/geometrisk-slankhet.md
       - Normalisert slankhet: formulas/normalisert-slankhet.md
       - Skruemoment: formulas/skruemoment.md
+      - Effekbehov deplasemangsskrog: formulas/effektbehov-deplasementsskrog.md
+      - Effekbehov halvplanende skrog: formulas/effektbehov-halvplanende-skrog.md
+      - Effekbehov planende skrog: formulas/effektbehov-planende-skrog.md
   - Kalkulatorer:
       - calculators/index.md
       - Press-Fit Calculator: calculators/press-fit-calculator.md
+      - Flow Speed Calculator: calculators/flow-speed-calculator.md
   - Referanse-data:
       - reference/index.md
+      - Material-egenskaper: reference/material-egenskaper.md
       - Friksjon — bolter og skruer: reference/friksjon-bolter-skruer.md
+      - Tiltrekningsmoment — metriske skruer: reference/tiltrekningsmoment_metrisk.md

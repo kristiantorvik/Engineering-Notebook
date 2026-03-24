@@ -7,7 +7,7 @@ tags:
   - Engineering
   - presspassning
   - maskinering
-type: calculator
+type: kalkulator
 updated: 2026-03-22
 ---
 

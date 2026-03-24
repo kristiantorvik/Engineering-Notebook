@@ -25,10 +25,10 @@ except ImportError:
 # ── Required fields per content type ──────────────────────────────────────────
 
 REQUIRED_FIELDS_BY_TYPE: dict[str, list[str]] = {
-    "note": ["title", "summary", "tags", "type"],
-    "formula": ["title", "summary", "tags", "type"],
-    "calculator": ["title", "summary", "tags", "type"],
-    "reference": ["title", "summary", "tags", "type"],
+    "notat": ["title", "summary", "tags", "type"],
+    "formel": ["title", "summary", "tags", "type"],
+    "kalkulator": ["title", "summary", "tags", "type"],
+    "referanse": ["title", "summary", "tags", "type"],
 }
 
 # Fields required on every content file regardless of type

@@ -4,7 +4,7 @@ summary: Gir et forhold til den geometriske stabiliteten i en søyle, brukt i kn
 tags:
   - Styrkeberegning
   - Engineering
-type: formula
+type: formel
 aliases:
   - Geometrisk slankhet
 updated: 2026-03-22

@@ -4,7 +4,7 @@ summary: Normalisert slankhet** er en "forbedret" slankhetsmodell som blir brukt
 tags:
   - Styrkeberegning
   - Engineering
-type: formula
+type: formel
 aliases:
   - Normalisert slankhet
 updated: 2026-03-22

@@ -2,9 +2,9 @@
 title: Engineering Notebook
 ---
 
-# Engineering Notebook
+# Tekniske notat og oppslag
 
-A personal technical reference for machining, fabrication, and engineering calculations.
+Ei personlig samling av nyttige notat, formler, kalkulatorer og oppslag.
 
 <div id="nb-search-ui">
 
@@ -13,16 +13,26 @@ A personal technical reference for machining, fabrication, and engineering calcu
       type="search"
       id="nb-search"
       class="nb-search-input"
-      placeholder="Search titles and summaries…"
+      placeholder="Søk på titler eller fra sammendrag"
       autocomplete="off"
     >
     <div class="nb-type-filters" id="nb-type-filters">
       <button class="nb-type-btn active" data-type="">All</button>
-      <button class="nb-type-btn" data-type="note">Notes</button>
-      <button class="nb-type-btn" data-type="formula">Formulas</button>
-      <button class="nb-type-btn" data-type="calculator">Calculators</button>
-      <button class="nb-type-btn" data-type="reference">Reference</button>
+      <button class="nb-type-btn" data-type="notat">Notat</button>
+      <button class="nb-type-btn" data-type="formel">Formler</button>
+      <button class="nb-type-btn" data-type="kalkulator">Kalkulatorer</button>
+      <button class="nb-type-btn" data-type="referanse">Referanse og oppslag</button>
     </div>
+  </div>
+
+  <div class="nb-tag-search-row">
+    <input
+      type="search"
+      id="nb-tag-search"
+      class="nb-tag-search-input"
+      placeholder="Filtrer tags…"
+      autocomplete="off"
+    >
   </div>
 
   <div class="nb-tags" id="nb-tags"></div>
@@ -45,10 +55,10 @@ A personal technical reference for machining, fabrication, and engineering calcu
   };
 
   const TYPE_COLORS = {
-    note:       "var(--nb-type-note)",
-    formula:    "var(--nb-type-formula)",
-    calculator: "var(--nb-type-calc)",
-    reference:  "var(--nb-type-ref)",
+    notat:       "var(--nb-type-notat)",
+    formel:    "var(--nb-type-formel)",
+    kalkulator: "var(--nb-type-kalkulator)",
+    referanse:  "var(--nb-type-referanse)",
   };
 
   let allPages = [];
@@ -95,6 +105,7 @@ A personal technical reference for machining, fabrication, and engineering calcu
       btn.addEventListener('click', () => toggleTag(tag));
       container.appendChild(btn);
     });
+    filterTagChips(document.getElementById('nb-tag-search').value.trim().toLowerCase());
   }
 
   function toggleTag(tag) {
@@ -127,6 +138,17 @@ A personal technical reference for machining, fabrication, and engineering calcu
     searchText = e.target.value.trim().toLowerCase();
     render();
   });
+
+  document.getElementById('nb-tag-search').addEventListener('input', e => {
+    filterTagChips(e.target.value.trim().toLowerCase());
+  });
+
+  function filterTagChips(q) {
+    document.querySelectorAll('.nb-tag-chip').forEach(btn => {
+      const match = !q || btn.dataset.tag.toLowerCase().includes(q);
+      btn.style.display = (match || btn.classList.contains('active')) ? '' : 'none';
+    });
+  }
 
   // ── Render ───────────────────────────────────────────────────────────────
 

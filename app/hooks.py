@@ -25,7 +25,7 @@ IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".bmp", ".
 _content_pages: list[dict] = []
 
 # Content types that have a `type` frontmatter field — everything else is skipped
-CONTENT_TYPES = {"note", "formula", "calculator", "reference"}
+CONTENT_TYPES = {"notat", "formel", "kalkulator", "referanse"}
 
 
 def on_config(config):

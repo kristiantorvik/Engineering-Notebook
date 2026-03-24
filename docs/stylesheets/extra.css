@@ -2,10 +2,10 @@
 
 /* ── Type badge colours ─────────────────────────────────────────── */
 :root {
-  --nb-type-note:    #4a90d9;
-  --nb-type-formula: #7b5ea7;
-  --nb-type-calc:    #3a9e6e;
-  --nb-type-ref:     #b07d3a;
+  --nb-type-notat:    #4a90d9;
+  --nb-type-formel: #7b5ea7;
+  --nb-type-kalkulator:    #3a9e6e;
+  --nb-type-referanse:     #b07d3a;
 }
 
 /* ── Home page search / filter UI ───────────────────────────────── */
@@ -64,6 +64,27 @@
   background: var(--md-primary-fg-color);
   border-color: var(--md-primary-fg-color);
   color: var(--md-primary-bg-color);
+}
+
+/* Tag search row */
+.nb-tag-search-row {
+  margin-bottom: 0.5rem;
+}
+
+.nb-tag-search-input {
+  padding: 0.35rem 0.65rem;
+  font-size: 0.82rem;
+  font-family: var(--md-code-font-family);
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  outline: none;
+  width: 180px;
+}
+
+.nb-tag-search-input:focus {
+  border-color: var(--md-primary-fg-color);
 }
 
 /* Tag chips */

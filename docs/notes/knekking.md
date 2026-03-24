@@ -4,7 +4,7 @@ summary: Formler og berekning av søyler i kompressjon
 tags:
   - Styrkeberegning
   - Engineering
-type: note
+type: notat
 updated: 2026-03-22
 ---
 

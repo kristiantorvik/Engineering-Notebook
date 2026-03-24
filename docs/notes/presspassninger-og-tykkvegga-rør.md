@@ -5,7 +5,7 @@ tags:
   - Styrkeberegning
   - Trykk
   - Engineering
-type: note
+type: notat
 updated: 2026-03-22
 ---
 

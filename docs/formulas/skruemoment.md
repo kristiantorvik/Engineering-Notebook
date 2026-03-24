@@ -6,7 +6,7 @@ tags:
   - Friksjon
   - Engineering
   - Gjenger
-type: formula
+type: formel
 aliases:
   - Dreiemoment
   - Tiltrekningsmoment

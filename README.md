@@ -90,8 +90,8 @@ Create `docs/formulas/<slug>.md`:
 ---
 title: "Formula Name"
 summary: "What it calculates."
-tags: [machining]
-type: formula
+tags: [CNC, Friksjon]
+type: formel
 aliases: [alternative name]
 ---
 ```
@@ -105,8 +105,8 @@ Create `docs/calculators/<slug>.md`:
 ---
 title: "Calculator Name"
 summary: "What it computes."
-tags: [machining, calculator]
-type: calculator
+tags: [CNC, Hydrauikk]
+type: kalkulator
 ---
 ```
 
@@ -119,8 +119,8 @@ Create `docs/reference/<slug>.md`:
 ---
 title: "Reference Title"
 summary: "What data it contains."
-tags: [reference, fasteners]
-type: reference
+tags: [Trykk, fasteners]
+type: referanse
 ---
 ```
 
