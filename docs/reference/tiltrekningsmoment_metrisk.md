@@ -53,7 +53,7 @@ For å berekne tiltrekningsmoment, løsningsmoment, forspenning etc:
    
 
 ###   Info
-Før  ste tall  et i kod  en 8.8 be   tyr bruddstyrken på skruen i 100 $MPa$
+Første tall  et i kod  en 8.8 be   tyr bruddstyrken på skruen i 100 $MPa$
 Det andre tallet er flytegrensens prosentandel av bruddstyrken.
 Eksempelvis vil en 12.9 bolt ha 1200$MPa$ brudd styrke og 108$MPa$ flytegrense.
 
