@@ -1,6 +1,6 @@
 ---
 title: Presspassninger og tykkvegga rør
-summary: Formler og berekning presspassninger og tykkvegga rør ved lame's ligninger
+summary: Formler og berekning presspassninger og tykkvegga rør ved lame's ligninger, søkeord, Pressmonn, Deformasjon, Foring, Hylse
 tags:
   - Styrkeberegning
   - Trykk

@@ -1,6 +1,6 @@
 ---
 title: Tiltrekningsmoment metriske skruer
-summary: Tabell med tiltrekningsmoment for metriske skruer og bolter
+summary: Tabell med tiltrekningsmoment for metriske skruer og bolter. Søkeord Torque spec
 tags:
   - Engineering
   - Gjenger

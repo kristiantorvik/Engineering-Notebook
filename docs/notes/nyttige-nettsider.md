@@ -1,6 +1,6 @@
 ---
-title: Presspassninger og tykkvegga rør
-summary: Formler og berekning presspassninger og tykkvegga rør ved lame's ligninger
+title: Nyttige nettsider
+summary: Nyttige nettsider for Mekanikk, Matematikk, Artikler og Markdown, Material, Styrkeberegninger, CNC, DIV, Bilder, Ikon.
 tags:
   - Styrkeberegning
   - Material

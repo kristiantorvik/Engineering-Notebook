@@ -26,7 +26,7 @@ $$
 ---
 
 ## Variabler
-$a_{\perp} =$ Sentripetal akselerasjonen [$m/s^2]
+$a_{\perp} =$ Sentripetal akselerasjonen [$m/s^2$]
 $v =$ Hastigheten [$m/s$]
 $r =$ radiusen til buevegelsen [$m$]
 ---
@@ -90,7 +90,7 @@ neh
 **Markdown / Latex:**
 ```Markdown
 $$
-$a_{\perp}\,=\,{\frac{v^{2}}{r}}$
+a_{\perp}\,=\,{\frac{v^{2}}{r}}
 $$
 ```
 

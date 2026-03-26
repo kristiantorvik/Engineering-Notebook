@@ -1,6 +1,6 @@
 ---
 title: Knekking / Buckling
-summary: Formler og berekning av søyler i kompressjon
+summary: Formler og berekning av søyler i kompressjon. Knekking / Buckling 
 tags:
   - Styrkeberegning
   - Engineering

@@ -79,6 +79,7 @@ nav:
       - calculators/index.md
       - Press-Fit Calculator: calculators/press-fit-calculator.md
       - Flow Speed Calculator: calculators/flow-speed-calculator.md
+      - Enhetsomformer: calculators/unit-converter.md
   - Referanse-data:
       - reference/index.md
       - Material-egenskaper: reference/material-egenskaper.md

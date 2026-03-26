@@ -1,11 +1,12 @@
 ---
 title: O-ring design
-summary: Teori og tommelfingerregler for O-ringer
+summary: Teori og tommelfingerregler for O-ringer / O ringer / Oringer
 tags:
   - Material
   - Engineering
   - Trykk
   - Failure-Analysis
+  - Tommelfinger-regel
 type: notat
 updated: 2026-03-22
 ---

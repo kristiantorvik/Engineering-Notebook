@@ -1,6 +1,6 @@
 ---
 title: Materialer og egenskaper
-summary: Typiske egenskaper for vanlige materialer.
+summary: Typiske egenskaper for vanlige materialer som, Egenvekt, Termisk utvidelse, Flytegrense, Bruddgrense, E-modul, Hardhet, Bruddforlengelse.
 tags:
   - Engineering
   - Material

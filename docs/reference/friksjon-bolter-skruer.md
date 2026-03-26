@@ -1,6 +1,6 @@
 ---
 title: Friksjon Bolter og skruer
-summary: Typiske friksjonstall for bolter og skruer
+summary: Typiske friksjonstall for bolter og skruer både i gjenger og under skrueholde
 tags:
   - Engineering
   - Gjenger
