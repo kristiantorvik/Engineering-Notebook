@@ -8,6 +8,7 @@ tags:
   - Masse
   - Temperatur
 type: kalkulator
+search_words: Enhet, unit,
 updated: 2026-03-26
 ---
 

@@ -163,7 +163,7 @@ Ei personlig samling av nyttige notat, formler, kalkulatorer og oppslag.
         }
       }
       if (q) {
-        const hay = (p.title + ' ' + p.summary + ' ' + (p.tags || []).join(' ')).toLowerCase();
+        const hay = (p.title + ' ' + p.summary + ' ' + (p.tags || []).join(' ') + ' ' + (p.search_words || '')).toLowerCase();
         if (!hay.includes(q)) return false;
       }
       return true;

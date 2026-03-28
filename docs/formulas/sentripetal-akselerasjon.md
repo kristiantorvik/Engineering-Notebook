@@ -7,7 +7,7 @@ tags:
   - Dynamikk
 type: formel
 aliases:
-  - Sentrifugal akselerasjon
+search_words: Sentrifugal, akselerasjon
 updated: 2026-03-22
 ---
 

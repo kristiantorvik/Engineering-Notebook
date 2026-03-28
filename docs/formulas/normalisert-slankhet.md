@@ -6,7 +6,7 @@ tags:
   - Engineering
 type: formel
 aliases:
-  - Normalisert slankhet
+search_words: Knekking, buckling
 updated: 2026-03-22
 ---
 

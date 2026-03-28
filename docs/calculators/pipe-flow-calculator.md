@@ -5,16 +5,16 @@ tags:
   - Hydraulikk
   - Pumpe
   - Strømning
-  - Bernoulli
   - Trukk
   - Veske
   - Fluidynamikk
   - Fysikk
 type: kalkulator
+search_words: flow, fallhøyde, pumpe
 updated: 2026-03-28
 ---
 
-# Rørstrøm- og pumpekalkulator
+# Rørstrøm og pumpekalkulator
 
 Beregner volumstrøm, pumpehøyde og trykk for et system med to reservoarer og én pumpe.
 

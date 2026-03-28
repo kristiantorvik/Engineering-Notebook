@@ -7,6 +7,7 @@ tags:
   - Veske
   - Tommelfinger-regel
 type: kalkulator
+search_words: flow, røyr, vann
 updated: 2026-03-24
 ---
 

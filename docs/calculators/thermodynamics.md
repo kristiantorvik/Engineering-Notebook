@@ -10,6 +10,7 @@ tags:
   - Gass
   - Veske
 type: kalkulator
+search_words: Varmepumpe
 updated: 2026-03-27
 ---
 

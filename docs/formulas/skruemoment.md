@@ -10,6 +10,7 @@ type: formel
 aliases:
   - Dreiemoment
   - Tiltrekningsmoment
+search_words: Dreiemoment, moment, tiltrekningsmoment
 updated: 2026-03-22
 ---
 

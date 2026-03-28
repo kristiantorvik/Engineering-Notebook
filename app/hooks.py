@@ -53,11 +53,12 @@ def on_page_context(context, page, config, nav, **kwargs):
         url = "."
 
     _content_pages.append({
-        "title":   meta.get("title", page.title or ""),
-        "type":    content_type,
-        "tags":    meta.get("tags") or [],
-        "summary": meta.get("summary", ""),
-        "url":     url,
+        "title":        meta.get("title", page.title or ""),
+        "type":         content_type,
+        "tags":         meta.get("tags") or [],
+        "summary":      meta.get("summary", ""),
+        "search_words": meta.get("search_words", ""),
+        "url":          url,
     })
     return context
 

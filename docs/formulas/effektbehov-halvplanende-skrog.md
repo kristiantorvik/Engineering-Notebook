@@ -11,6 +11,7 @@ aliases:
   - Effektbehov for båter
   - Nødvendig hestekrefter båt
   - Toppfart båt
+search_words: 
 updated: 2026-03-22
 ---
 # Effektbehov for halvplanende skrog (Semi-Displacement Hull)

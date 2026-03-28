@@ -6,6 +6,7 @@ tags:
   - Prosesser
   - Varmepumpe
 type: note
+search_words:
 updated: 2026-03-27
 ---
 

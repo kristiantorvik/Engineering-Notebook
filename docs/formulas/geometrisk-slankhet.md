@@ -7,6 +7,7 @@ tags:
 type: formel
 aliases:
   - Geometrisk slankhet
+search_words: Knekking, buckling
 updated: 2026-03-22
 ---
 

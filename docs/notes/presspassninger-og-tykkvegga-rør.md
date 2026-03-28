@@ -6,6 +6,7 @@ tags:
   - Trykk
   - Engineering
 type: notat
+search_words: foring, bushing, boss, passning
 updated: 2026-03-22
 ---
 

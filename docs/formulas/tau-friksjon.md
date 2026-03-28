@@ -9,7 +9,7 @@ tags:
   - Friksjon
 type: formel
 aliases:
-  - Omslutningsvinkel
+search_words: Omslutningsvinkel, wrap, reim
 updated: 2026-03-22
 ---
 

@@ -8,6 +8,7 @@ tags:
   - presspassning
   - maskinering
 type: kalkulator
+search_words: Bushing, hylse, passning, foring, boss
 updated: 2026-03-22
 ---
 

@@ -8,6 +8,7 @@ tags:
   - CNC
   - Engineering
 type: notat
+search_words:
 updated: 2026-03-22
 ---
 

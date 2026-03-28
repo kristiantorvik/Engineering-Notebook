@@ -10,6 +10,7 @@ tags:
   - Volum
 type: formel
 aliases:
+search_words: Flow, vann, Veske
 updated: 2026-03-28
 ---
 

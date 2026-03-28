@@ -6,6 +6,7 @@ tags:
   - Varmepumpe
   - Egenskaper
 type: note
+search_words:
 updated: 2026-03-27
 ---
 
