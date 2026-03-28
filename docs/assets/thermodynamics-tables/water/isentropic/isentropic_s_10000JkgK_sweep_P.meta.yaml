@@ -1,0 +1,115 @@
+table_id: water/isentropic/isentropic_s_10000JkgK_sweep_P
+medium_id: water
+process_family: isentropic
+constant_property: specific_entropy
+constant_value: 10000.0
+constant_value_si: 10000.0
+constant_unit: J/kgK
+sweep_variable: pressure
+sweep_unit: Pa
+sweep_range:
+  start: 1000.0
+  stop: 20000000.0
+  step: 50000.0
+csv_file: isentropic_s_10000JkgK_sweep_P.csv
+generated_at: '2026-03-27T16:48:42.448589Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 400
+valid_rows: 353
+skipped_rows: 47
+warnings:
+- 'Skipped sweep=17651000.0 Pa: Could not compute T or P for Water at P=17651000.0,
+  S=10000.0.'
+- 'Skipped sweep=17701000.0 Pa: Could not compute T or P for Water at P=17701000.0,
+  S=10000.0.'
+- 'Skipped sweep=17751000.0 Pa: Could not compute T or P for Water at P=17751000.0,
+  S=10000.0.'
+- 'Skipped sweep=17801000.0 Pa: Could not compute T or P for Water at P=17801000.0,
+  S=10000.0.'
+- 'Skipped sweep=17851000.0 Pa: Could not compute T or P for Water at P=17851000.0,
+  S=10000.0.'
+- 'Skipped sweep=17901000.0 Pa: Could not compute T or P for Water at P=17901000.0,
+  S=10000.0.'
+- 'Skipped sweep=17951000.0 Pa: Could not compute T or P for Water at P=17951000.0,
+  S=10000.0.'
+- 'Skipped sweep=18001000.0 Pa: Could not compute T or P for Water at P=18001000.0,
+  S=10000.0.'
+- 'Skipped sweep=18051000.0 Pa: Could not compute T or P for Water at P=18051000.0,
+  S=10000.0.'
+- 'Skipped sweep=18101000.0 Pa: Could not compute T or P for Water at P=18101000.0,
+  S=10000.0.'
+- 'Skipped sweep=18151000.0 Pa: Could not compute T or P for Water at P=18151000.0,
+  S=10000.0.'
+- 'Skipped sweep=18201000.0 Pa: Could not compute T or P for Water at P=18201000.0,
+  S=10000.0.'
+- 'Skipped sweep=18251000.0 Pa: Could not compute T or P for Water at P=18251000.0,
+  S=10000.0.'
+- 'Skipped sweep=18301000.0 Pa: Could not compute T or P for Water at P=18301000.0,
+  S=10000.0.'
+- 'Skipped sweep=18351000.0 Pa: Could not compute T or P for Water at P=18351000.0,
+  S=10000.0.'
+- 'Skipped sweep=18401000.0 Pa: Could not compute T or P for Water at P=18401000.0,
+  S=10000.0.'
+- 'Skipped sweep=18451000.0 Pa: Could not compute T or P for Water at P=18451000.0,
+  S=10000.0.'
+- 'Skipped sweep=18501000.0 Pa: Could not compute T or P for Water at P=18501000.0,
+  S=10000.0.'
+- 'Skipped sweep=18551000.0 Pa: Could not compute T or P for Water at P=18551000.0,
+  S=10000.0.'
+- 'Skipped sweep=18601000.0 Pa: Could not compute T or P for Water at P=18601000.0,
+  S=10000.0.'
+- 'Skipped sweep=18651000.0 Pa: Could not compute T or P for Water at P=18651000.0,
+  S=10000.0.'
+- 'Skipped sweep=18701000.0 Pa: Could not compute T or P for Water at P=18701000.0,
+  S=10000.0.'
+- 'Skipped sweep=18751000.0 Pa: Could not compute T or P for Water at P=18751000.0,
+  S=10000.0.'
+- 'Skipped sweep=18801000.0 Pa: Could not compute T or P for Water at P=18801000.0,
+  S=10000.0.'
+- 'Skipped sweep=18851000.0 Pa: Could not compute T or P for Water at P=18851000.0,
+  S=10000.0.'
+- 'Skipped sweep=18901000.0 Pa: Could not compute T or P for Water at P=18901000.0,
+  S=10000.0.'
+- 'Skipped sweep=18951000.0 Pa: Could not compute T or P for Water at P=18951000.0,
+  S=10000.0.'
+- 'Skipped sweep=19001000.0 Pa: Could not compute T or P for Water at P=19001000.0,
+  S=10000.0.'
+- 'Skipped sweep=19051000.0 Pa: Could not compute T or P for Water at P=19051000.0,
+  S=10000.0.'
+- 'Skipped sweep=19101000.0 Pa: Could not compute T or P for Water at P=19101000.0,
+  S=10000.0.'
+- 'Skipped sweep=19151000.0 Pa: Could not compute T or P for Water at P=19151000.0,
+  S=10000.0.'
+- 'Skipped sweep=19201000.0 Pa: Could not compute T or P for Water at P=19201000.0,
+  S=10000.0.'
+- 'Skipped sweep=19251000.0 Pa: Could not compute T or P for Water at P=19251000.0,
+  S=10000.0.'
+- 'Skipped sweep=19301000.0 Pa: Could not compute T or P for Water at P=19301000.0,
+  S=10000.0.'
+- 'Skipped sweep=19351000.0 Pa: Could not compute T or P for Water at P=19351000.0,
+  S=10000.0.'
+- 'Skipped sweep=19401000.0 Pa: Could not compute T or P for Water at P=19401000.0,
+  S=10000.0.'
+- 'Skipped sweep=19451000.0 Pa: Could not compute T or P for Water at P=19451000.0,
+  S=10000.0.'
+- 'Skipped sweep=19501000.0 Pa: Could not compute T or P for Water at P=19501000.0,
+  S=10000.0.'
+- 'Skipped sweep=19551000.0 Pa: Could not compute T or P for Water at P=19551000.0,
+  S=10000.0.'
+- 'Skipped sweep=19601000.0 Pa: Could not compute T or P for Water at P=19601000.0,
+  S=10000.0.'
+- 'Skipped sweep=19651000.0 Pa: Could not compute T or P for Water at P=19651000.0,
+  S=10000.0.'
+- 'Skipped sweep=19701000.0 Pa: Could not compute T or P for Water at P=19701000.0,
+  S=10000.0.'
+- 'Skipped sweep=19751000.0 Pa: Could not compute T or P for Water at P=19751000.0,
+  S=10000.0.'
+- 'Skipped sweep=19801000.0 Pa: Could not compute T or P for Water at P=19801000.0,
+  S=10000.0.'
+- 'Skipped sweep=19851000.0 Pa: Could not compute T or P for Water at P=19851000.0,
+  S=10000.0.'
+- 'Skipped sweep=19901000.0 Pa: Could not compute T or P for Water at P=19901000.0,
+  S=10000.0.'
+- 'Skipped sweep=19951000.0 Pa: Could not compute T or P for Water at P=19951000.0,
+  S=10000.0.'

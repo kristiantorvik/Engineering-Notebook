@@ -1,0 +1,21 @@
+table_id: r32/isenthalpic/isenthalpic_h_270000Jkg_sweep_P
+medium_id: r32
+process_family: isenthalpic
+constant_property: specific_enthalpy
+constant_value: 270000.0
+constant_value_si: 270000.0
+constant_unit: J/kg
+sweep_variable: pressure
+sweep_unit: Pa
+sweep_range:
+  start: 50000.0
+  stop: 10000000.0
+  step: 10000.0
+csv_file: isenthalpic_h_270000Jkg_sweep_P.csv
+generated_at: '2026-03-27T16:41:53.901103Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 996
+valid_rows: 996
+skipped_rows: 0
+warnings: []

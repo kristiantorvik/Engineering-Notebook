@@ -1,0 +1,21 @@
+table_id: propane/isochoric/isochoric_v_0.0017m3kg_sweep_T
+medium_id: propane
+process_family: isochoric
+constant_property: specific_volume
+constant_value: 0.0017
+constant_value_si: 0.0017
+constant_unit: m3/kg
+sweep_variable: temperature
+sweep_unit: K
+sweep_range:
+  start: 213.15
+  stop: 423.15
+  step: 1.0
+csv_file: isochoric_v_0.0017m3kg_sweep_T.csv
+generated_at: '2026-03-27T16:35:43.911254Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 211
+valid_rows: 211
+skipped_rows: 0
+warnings: []

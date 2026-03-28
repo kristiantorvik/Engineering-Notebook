@@ -1,0 +1,21 @@
+table_id: propane/isobaric/isobaric_P_2.5e+06Pa_sweep_T
+medium_id: propane
+process_family: isobaric
+constant_property: pressure
+constant_value: 2500000.0
+constant_value_si: 2500000.0
+constant_unit: Pa
+sweep_variable: temperature
+sweep_unit: K
+sweep_range:
+  start: 213.15
+  stop: 423.15
+  step: 1.0
+csv_file: isobaric_P_2.5e+06Pa_sweep_T.csv
+generated_at: '2026-03-27T16:35:41.503434Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 211
+valid_rows: 211
+skipped_rows: 0
+warnings: []

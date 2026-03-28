@@ -222,6 +222,10 @@ mark.nb-hl {
   font-size: 0.9rem;
 }
 
+.md-grid {
+  max-width: 1600px; 
+}
+
 /* Calculator card layout */
 .calc-card {
   border: 1px solid var(--md-default-fg-color--lightest);

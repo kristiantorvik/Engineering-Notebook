@@ -1,0 +1,21 @@
+table_id: r134a/isobaric/isobaric_P_1.8e+06Pa_sweep_T
+medium_id: r134a
+process_family: isobaric
+constant_property: pressure
+constant_value: 1800000.0
+constant_value_si: 1800000.0
+constant_unit: Pa
+sweep_variable: temperature
+sweep_unit: K
+sweep_range:
+  start: 193.15
+  stop: 423.15
+  step: 1.0
+csv_file: isobaric_P_1.8e+06Pa_sweep_T.csv
+generated_at: '2026-03-27T16:37:07.073147Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 231
+valid_rows: 231
+skipped_rows: 0
+warnings: []

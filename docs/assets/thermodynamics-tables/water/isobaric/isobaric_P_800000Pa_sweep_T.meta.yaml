@@ -1,0 +1,21 @@
+table_id: water/isobaric/isobaric_P_800000Pa_sweep_T
+medium_id: water
+process_family: isobaric
+constant_property: pressure
+constant_value: 800000.0
+constant_value_si: 800000.0
+constant_unit: Pa
+sweep_variable: temperature
+sweep_unit: K
+sweep_range:
+  start: 274.15
+  stop: 1073.15
+  step: 1.0
+csv_file: isobaric_P_800000Pa_sweep_T.csv
+generated_at: '2026-03-27T16:43:28.726945Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 800
+valid_rows: 800
+skipped_rows: 0
+warnings: []

@@ -1,0 +1,27 @@
+table_id: air/isenthalpic/isenthalpic_h_50000Jkg_sweep_P
+medium_id: air
+process_family: isenthalpic
+constant_property: specific_enthalpy
+constant_value: 50000.0
+constant_value_si: 50000.0
+constant_unit: J/kg
+sweep_variable: pressure
+sweep_unit: Pa
+sweep_range:
+  start: 10000.0
+  stop: 5000000.0
+  step: 25000.0
+csv_file: isenthalpic_h_50000Jkg_sweep_P.csv
+generated_at: '2026-03-27T16:29:50.546514Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 200
+valid_rows: 194
+skipped_rows: 6
+warnings:
+- 'Skipped sweep=685000.0 Pa: Could not compute T or P for Air at P=685000.0, H=50000.0.'
+- 'Skipped sweep=710000.0 Pa: Could not compute T or P for Air at P=710000.0, H=50000.0.'
+- 'Skipped sweep=735000.0 Pa: Could not compute T or P for Air at P=735000.0, H=50000.0.'
+- 'Skipped sweep=760000.0 Pa: Could not compute T or P for Air at P=760000.0, H=50000.0.'
+- 'Skipped sweep=785000.0 Pa: Could not compute T or P for Air at P=785000.0, H=50000.0.'
+- 'Skipped sweep=810000.0 Pa: Could not compute T or P for Air at P=810000.0, H=50000.0.'

@@ -1,0 +1,23 @@
+table_id: r134a/isenthalpic/isenthalpic_h_125000Jkg_sweep_P
+medium_id: r134a
+process_family: isenthalpic
+constant_property: specific_enthalpy
+constant_value: 125000.0
+constant_value_si: 125000.0
+constant_unit: J/kg
+sweep_variable: pressure
+sweep_unit: Pa
+sweep_range:
+  start: 10000.0
+  stop: 5000000.0
+  step: 10000.0
+csv_file: isenthalpic_h_125000Jkg_sweep_P.csv
+generated_at: '2026-03-27T16:38:33.491454Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 500
+valid_rows: 499
+skipped_rows: 1
+warnings:
+- 'Skipped sweep=4050000.0 Pa: Could not compute T or P for R134a at P=4050000.0,
+  H=125000.0.'

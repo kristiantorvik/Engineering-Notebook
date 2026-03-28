@@ -1,0 +1,21 @@
+table_id: co2/isentropic/isentropic_s_1600JkgK_sweep_P
+medium_id: co2
+process_family: isentropic
+constant_property: specific_entropy
+constant_value: 1600.0
+constant_value_si: 1600.0
+constant_unit: J/kgK
+sweep_variable: pressure
+sweep_unit: Pa
+sweep_range:
+  start: 600000.0
+  stop: 35000000.0
+  step: 50000.0
+csv_file: isentropic_s_1600JkgK_sweep_P.csv
+generated_at: '2026-03-27T16:34:50.915812Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 689
+valid_rows: 689
+skipped_rows: 0
+warnings: []

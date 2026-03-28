@@ -65,6 +65,9 @@ nav:
       - O-ring Design: notes/O-ring-design.md
       - Presspassninger og tykkvegga rør: notes/presspassninger-og-tykkvegga-rør.md
       - Nyttige nettsider: notes/nyttige-nettsider.md
+      - Termodynamiske prosesser: notes/termodynamiske-prosesser.md
+      - Termodynamiske egenskaper: notes/termodynamiske-egenskaper.md
+
   - Formler:
       - formulas/index.md
       - Geometrisk slankhet: formulas/geometrisk-slankhet.md
@@ -75,11 +78,14 @@ nav:
       - Effekbehov planende skrog: formulas/effektbehov-planende-skrog.md
       - Tau friksjon: formulas/tau-friksjon.md
       - Sentripetal akselerasjon: formulas/sentripetal-akselerasjon.md
+      - Bernoullis formel: formulas/bernoullis.md
   - Kalkulatorer:
       - calculators/index.md
       - Press-Fit Calculator: calculators/press-fit-calculator.md
       - Flow Speed Calculator: calculators/flow-speed-calculator.md
       - Enhetsomformer: calculators/unit-converter.md
+      - Termodynamikk-tabeller: calculators/thermodynamics.md
+      - Rørstrøm og pumpe: calculators/pipe-flow-calculator.md
   - Referanse-data:
       - reference/index.md
       - Material-egenskaper: reference/material-egenskaper.md

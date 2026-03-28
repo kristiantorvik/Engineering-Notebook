@@ -1,0 +1,21 @@
+table_id: co2/isothermal/isothermal_T_423.15K_sweep_P
+medium_id: co2
+process_family: isothermal
+constant_property: temperature
+constant_value: 423.15
+constant_value_si: 423.15
+constant_unit: K
+sweep_variable: pressure
+sweep_unit: Pa
+sweep_range:
+  start: 600000.0
+  stop: 35000000.0
+  step: 25000.0
+csv_file: isothermal_T_423.15K_sweep_P.csv
+generated_at: '2026-03-27T16:34:34.301957Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 1377
+valid_rows: 1377
+skipped_rows: 0
+warnings: []

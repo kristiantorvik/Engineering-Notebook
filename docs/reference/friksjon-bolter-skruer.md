@@ -5,7 +5,7 @@ tags:
   - Engineering
   - Gjenger
   - fasteners
-  - friksjon
+  - Friksjon
 type: referanse
 updated: 2026-03-22
 ---

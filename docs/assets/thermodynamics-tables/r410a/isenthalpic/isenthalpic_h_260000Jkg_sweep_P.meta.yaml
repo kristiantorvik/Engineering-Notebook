@@ -1,0 +1,33 @@
+table_id: r410a/isenthalpic/isenthalpic_h_260000Jkg_sweep_P
+medium_id: r410a
+process_family: isenthalpic
+constant_property: specific_enthalpy
+constant_value: 260000.0
+constant_value_si: 260000.0
+constant_unit: J/kg
+sweep_variable: pressure
+sweep_unit: Pa
+sweep_range:
+  start: 50000.0
+  stop: 8000000.0
+  step: 10000.0
+csv_file: isenthalpic_h_260000Jkg_sweep_P.csv
+generated_at: '2026-03-27T16:43:03.647347Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 796
+valid_rows: 790
+skipped_rows: 6
+warnings:
+- 'Skipped sweep=4840000.0 Pa: Could not compute T or P for R410A at P=4840000.0,
+  H=260000.0.'
+- 'Skipped sweep=4850000.0 Pa: Could not compute T or P for R410A at P=4850000.0,
+  H=260000.0.'
+- 'Skipped sweep=4860000.0 Pa: Could not compute T or P for R410A at P=4860000.0,
+  H=260000.0.'
+- 'Skipped sweep=4870000.0 Pa: Could not compute T or P for R410A at P=4870000.0,
+  H=260000.0.'
+- 'Skipped sweep=4880000.0 Pa: Could not compute T or P for R410A at P=4880000.0,
+  H=260000.0.'
+- 'Skipped sweep=4890000.0 Pa: Could not compute T or P for R410A at P=4890000.0,
+  H=260000.0.'

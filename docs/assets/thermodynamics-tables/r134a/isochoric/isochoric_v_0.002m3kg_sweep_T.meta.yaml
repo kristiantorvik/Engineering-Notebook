@@ -1,0 +1,21 @@
+table_id: r134a/isochoric/isochoric_v_0.002m3kg_sweep_T
+medium_id: r134a
+process_family: isochoric
+constant_property: specific_volume
+constant_value: 0.002
+constant_value_si: 0.002
+constant_unit: m3/kg
+sweep_variable: temperature
+sweep_unit: K
+sweep_range:
+  start: 193.15
+  stop: 423.15
+  step: 1.0
+csv_file: isochoric_v_0.002m3kg_sweep_T.csv
+generated_at: '2026-03-27T16:37:11.540296Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 231
+valid_rows: 231
+skipped_rows: 0
+warnings: []

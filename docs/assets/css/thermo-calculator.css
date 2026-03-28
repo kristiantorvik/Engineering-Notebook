@@ -1,0 +1,248 @@
+/* ── Thermodynamics Calculator — tc-* namespace ───────────────────── */
+
+/* Full-bleed wrapper: breaks out of the MkDocs content max-width      */
+/* without affecting any other page. Uses the 50vw margin trick.        */
+.tc-bleed {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+.tc-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Labels ────────────────────────────────────────────────────────── */
+.tc-field-label {
+  display: block;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: .35rem;
+}
+
+/* ── Select boxes ──────────────────────────────────────────────────── */
+.tc-select {
+  width: 100%;
+  padding: .6rem .75rem;
+  background: var(--md-code-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .3rem;
+  color: var(--md-default-fg-color);
+  font-family: var(--md-code-font-family);
+  font-size: .9rem;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.tc-select:focus {
+  outline: 2px solid var(--md-primary-fg-color);
+  outline-offset: 1px;
+}
+.tc-select:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+/* ── Selector row (2 columns) ─────────────────────────────────────── */
+.tc-selectors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .9rem;
+}
+
+/* ── Status / error box ───────────────────────────────────────────── */
+.tc-status {
+  padding: .55rem .85rem;
+  border-radius: .25rem;
+  font-size: .88rem;
+  color: var(--md-default-fg-color);
+}
+.tc-status.tc-status--error {
+  background: color-mix(in srgb, var(--md-code-bg-color) 75%, red 20%);
+  border-left: 3px solid #e53935;
+}
+.tc-status.tc-status--info {
+  background: var(--md-code-bg-color);
+  border-left: 3px solid var(--md-primary-fg-color);
+  color: var(--md-default-fg-color--light);
+}
+
+/* ── Metadata panel ───────────────────────────────────────────────── */
+.tc-meta-panel {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .3rem;
+  padding: .85rem 1rem;
+  background: var(--md-code-bg-color);
+}
+.tc-meta-title {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: .6rem;
+}
+.tc-meta-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .2rem .9rem;
+}
+.tc-meta-key {
+  font-size: .82rem;
+  color: var(--md-default-fg-color--light);
+  white-space: nowrap;
+}
+.tc-meta-val {
+  font-size: .82rem;
+  color: var(--md-default-fg-color);
+  font-family: var(--md-code-font-family);
+}
+
+/* ── Table viewer ─────────────────────────────────────────────────── */
+.tc-table-wrap {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 720px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .3rem;
+}
+.tc-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--md-code-font-family);
+  font-size: .8rem;
+  white-space: nowrap;
+}
+.tc-data-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.tc-data-table th {
+  background: color-mix(in srgb, var(--md-code-bg-color) 80%, var(--md-primary-fg-color) 15%);
+  color: var(--md-default-fg-color--light);
+  font-weight: 600;
+  font-size: .72rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  padding: .4rem .65rem;
+  text-align: right;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  cursor: default;
+}
+.tc-data-table th:first-child { text-align: left; }
+.tc-data-table td {
+  padding: .32rem .65rem;
+  text-align: right;
+  border-bottom: 1px solid color-mix(in srgb, var(--md-default-fg-color--lightest) 50%, transparent);
+  color: var(--md-default-fg-color);
+}
+.tc-data-table td:first-child { text-align: left; }
+.tc-data-table tbody tr {
+  cursor: pointer;
+  transition: background .1s;
+}
+.tc-data-table tbody tr:hover {
+  background: color-mix(in srgb, var(--md-code-bg-color) 60%, var(--md-primary-fg-color) 10%);
+}
+.tc-data-table tbody tr.tc-selected {
+  background: color-mix(in srgb, var(--md-code-bg-color) 40%, var(--md-primary-fg-color) 20%);
+}
+.tc-data-table tbody tr.tc-selected td {
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+}
+
+/* ── Row navigation ───────────────────────────────────────────────── */
+.tc-nav-row {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-top: .5rem;
+}
+.tc-nav-btn {
+  padding: .3rem .85rem;
+  background: transparent;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .25rem;
+  color: var(--md-default-fg-color--light);
+  font-size: .85rem;
+  cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.tc-nav-btn:hover:not(:disabled) {
+  background: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+.tc-nav-btn:disabled {
+  opacity: .3;
+  cursor: not-allowed;
+}
+.tc-nav-counter {
+  font-size: .82rem;
+  color: var(--md-default-fg-color--light);
+  font-family: var(--md-code-font-family);
+}
+
+/* ── State summary card ───────────────────────────────────────────── */
+.tc-state-card {
+  border: 1px solid var(--md-primary-fg-color);
+  border-radius: .3rem;
+  padding: .85rem 1rem;
+  background: color-mix(in srgb, var(--md-code-bg-color) 80%, var(--md-primary-fg-color) 8%);
+}
+.tc-state-title {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--md-primary-fg-color);
+  margin-bottom: .65rem;
+}
+.tc-state-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: .5rem;
+}
+.tc-state-tile {
+  background: var(--md-code-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .25rem;
+  padding: .4rem .6rem;
+}
+.tc-state-tile-label {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: .1rem;
+}
+.tc-state-tile-value {
+  font-size: .92rem;
+  font-family: var(--md-code-font-family);
+  color: var(--md-default-fg-color);
+}
+.tc-state-tile--phase .tc-state-tile-value {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .tc-selectors {
+    grid-template-columns: 1fr;
+  }
+  .tc-state-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+}

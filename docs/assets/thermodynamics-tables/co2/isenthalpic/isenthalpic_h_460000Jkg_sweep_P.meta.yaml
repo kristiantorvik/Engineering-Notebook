@@ -1,0 +1,21 @@
+table_id: co2/isenthalpic/isenthalpic_h_460000Jkg_sweep_P
+medium_id: co2
+process_family: isenthalpic
+constant_property: specific_enthalpy
+constant_value: 460000.0
+constant_value_si: 460000.0
+constant_unit: J/kg
+sweep_variable: pressure
+sweep_unit: Pa
+sweep_range:
+  start: 600000.0
+  stop: 35000000.0
+  step: 50000.0
+csv_file: isenthalpic_h_460000Jkg_sweep_P.csv
+generated_at: '2026-03-27T16:35:30.567821Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 689
+valid_rows: 689
+skipped_rows: 0
+warnings: []

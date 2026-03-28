@@ -1,0 +1,29 @@
+table_id: air/isentropic/isentropic_s_1200JkgK_sweep_P
+medium_id: air
+process_family: isentropic
+constant_property: specific_entropy
+constant_value: 1200.0
+constant_value_si: 1200.0
+constant_unit: J/kgK
+sweep_variable: pressure
+sweep_unit: Pa
+sweep_range:
+  start: 10000.0
+  stop: 10000000.0
+  step: 25000.0
+csv_file: isentropic_s_1200JkgK_sweep_P.csv
+generated_at: '2026-03-27T16:29:46.878291Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 400
+valid_rows: 392
+skipped_rows: 8
+warnings:
+- 'Skipped sweep=3385000.0 Pa: Could not compute T or P for Air at P=3385000.0, S=1200.0.'
+- 'Skipped sweep=3410000.0 Pa: Could not compute T or P for Air at P=3410000.0, S=1200.0.'
+- 'Skipped sweep=3435000.0 Pa: Could not compute T or P for Air at P=3435000.0, S=1200.0.'
+- 'Skipped sweep=3460000.0 Pa: Could not compute T or P for Air at P=3460000.0, S=1200.0.'
+- 'Skipped sweep=3485000.0 Pa: Could not compute T or P for Air at P=3485000.0, S=1200.0.'
+- 'Skipped sweep=3510000.0 Pa: Could not compute T or P for Air at P=3510000.0, S=1200.0.'
+- 'Skipped sweep=3535000.0 Pa: Could not compute T or P for Air at P=3535000.0, S=1200.0.'
+- 'Skipped sweep=3560000.0 Pa: Could not compute T or P for Air at P=3560000.0, S=1200.0.'

@@ -1,0 +1,21 @@
+table_id: air/isothermal/isothermal_T_313.15K_sweep_P
+medium_id: air
+process_family: isothermal
+constant_property: temperature
+constant_value: 313.15
+constant_value_si: 313.15
+constant_unit: K
+sweep_variable: pressure
+sweep_unit: Pa
+sweep_range:
+  start: 10000.0
+  stop: 10000000.0
+  step: 10000.0
+csv_file: isothermal_T_313.15K_sweep_P.csv
+generated_at: '2026-03-27T16:29:38.539230Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 1000
+valid_rows: 1000
+skipped_rows: 0
+warnings: []

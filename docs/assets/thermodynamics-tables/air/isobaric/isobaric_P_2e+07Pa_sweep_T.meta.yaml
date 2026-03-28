@@ -1,0 +1,21 @@
+table_id: air/isobaric/isobaric_P_2e+07Pa_sweep_T
+medium_id: air
+process_family: isobaric
+constant_property: pressure
+constant_value: 20000000.0
+constant_value_si: 20000000.0
+constant_unit: Pa
+sweep_variable: temperature
+sweep_unit: K
+sweep_range:
+  start: 173.15
+  stop: 1473.15
+  step: 2.0
+csv_file: isobaric_P_2e+07Pa_sweep_T.csv
+generated_at: '2026-03-27T16:29:30.292130Z'
+coolprop_version: 7.2.0
+generator_version: 0.1.0
+attempted_rows: 651
+valid_rows: 651
+skipped_rows: 0
+warnings: []
