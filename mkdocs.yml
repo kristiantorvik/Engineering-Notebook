@@ -22,6 +22,8 @@ theme:
     - search.highlight
     - search.suggest
     - content.code.copy
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
 
 hooks:
   - app/hooks.py
@@ -67,7 +69,7 @@ nav:
       - Nyttige nettsider: notes/nyttige-nettsider.md
       - Termodynamiske prosesser: notes/termodynamiske-prosesser.md
       - Termodynamiske egenskaper: notes/termodynamiske-egenskaper.md
-
+      - Treghetsmoment og motstandsmoment: notes/treghetsmoment-motstandsmoment.md
   - Formler:
       - formulas/index.md
       - Geometrisk slankhet: formulas/geometrisk-slankhet.md
@@ -79,6 +81,7 @@ nav:
       - Tau friksjon: formulas/tau-friksjon.md
       - Sentripetal akselerasjon: formulas/sentripetal-akselerasjon.md
       - Bernoullis formel: formulas/bernoullis.md
+      - Vridning av aksel: formulas/vridning-aksel.md
   - Kalkulatorer:
       - calculators/index.md
       - Press-Fit Calculator: calculators/press-fit-calculator.md

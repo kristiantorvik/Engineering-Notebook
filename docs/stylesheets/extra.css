@@ -6,6 +6,16 @@
   --nb-type-formel: #7b5ea7;
   --nb-type-kalkulator:    #3a9e6e;
   --nb-type-referanse:     #b07d3a;
+
+  /* Width of illustration images inside formula/note tables */
+  --nb-table-img-width: 150px;
+}
+
+/* ── Table illustration images ───────────────────────────────────── */
+/* Apply to tables wrapped in <div class="nb-illustration-table" markdown="1"> */
+.md-typeset .nb-illustration-table img {
+  width: var(--nb-table-img-width);
+  height: auto;
 }
 
 /* ── Home page search / filter UI ───────────────────────────────── */
