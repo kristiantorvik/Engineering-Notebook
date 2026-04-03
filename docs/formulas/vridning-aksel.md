@@ -68,7 +68,7 @@ $G =8 \cdot 10^4 \ MPa$
 
 $\large \phi = \dfrac{M_v \cdot l}{I_p \cdot G}$
 
-$\large \phi = \dfrac{100000 \, Nmm$ \cdot 1000 \, mm}{251327 \cdot 8 \cdot 10^4 \ MPa} \, \approx \, 5.0 \cdot 10^{-2} Rad \approx 0.285°$
+$\large \phi = \dfrac{100000 \, Nmm \cdot 1000 \, mm}{251327 \cdot 8 \cdot 10^4 \ MPa} \, \approx \, 5.0 \cdot 10^{-2} Rad \approx 0.285°$
 
 ---
 

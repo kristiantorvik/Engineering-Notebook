@@ -82,6 +82,7 @@ nav:
       - Sentripetal akselerasjon: formulas/sentripetal-akselerasjon.md
       - Bernoullis formel: formulas/bernoullis.md
       - Vridning av aksel: formulas/vridning-aksel.md
+      - ABC formelen: formulas/abc-formelen.md
   - Kalkulatorer:
       - calculators/index.md
       - Press-Fit Calculator: calculators/press-fit-calculator.md
@@ -94,3 +95,5 @@ nav:
       - Material-egenskaper: reference/material-egenskaper.md
       - Friksjon — bolter og skruer: reference/friksjon-bolter-skruer.md
       - Tiltrekningsmoment — metriske skruer: reference/tiltrekningsmoment_metrisk.md
+      - Logarimeregler: reference/logaritmeregler.md
+      - Potensregler: reference/potensregler.md

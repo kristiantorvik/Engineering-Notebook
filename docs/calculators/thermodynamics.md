@@ -1,6 +1,6 @@
 ---
 title: Termodynamikk-tabeller
-summary: Termodynamiske tabeller. Finn data for, Fasetilstand, Temperatur, Trykk, Entalpi, Indre energi, Entropi, Spesifikt volum, tetthet, varmekapasitet, Cp Cv for medier som Vann, Luft, Amoniakk R-717, co2 R-744, Propan R-290, R-32, R-134a, R-410A. Finn tabeller som følger prosser, Isobar, Isokor, Isoterm, Isentropisk, Isentalpisk.
+summary: Termodynamiske tabeller. Finn data for, Fasetilstand, Temperatur, Trykk, Entalpi, Indre energi, Entropi, Spesifikt volum, tetthet, varmekapasitet
 tags:
   - Termodynamikk
   - Tilstandstabeller
@@ -10,7 +10,7 @@ tags:
   - Gass
   - Veske
 type: kalkulator
-search_words: Varmepumpe
+search_words: Varmepumpe, Vann, Luft, Amoniakk, R-717, co2, R-744, Propan, R-290, R-32, R-134a, R-410A, prosser, Isobar, Isokor, Isoterm, Isentropisk, Isentalpisk
 updated: 2026-03-27
 ---
 

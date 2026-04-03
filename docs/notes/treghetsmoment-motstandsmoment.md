@@ -14,7 +14,7 @@ updated: 2026-03-31
 
 # Arealmoment, treghetsmoment og motstandsmoment
 
-Det finst fleire storleikar med liknande namn og symbol som lett kan forvekslast — særleg når ein finn formlar på nett der omgrepa ofte er blanda saman. Dette notatet gir ei oversikt over alle dei vanlege typane, kva dei betyr, og korr dei blir brukt og formler på vanlige tversnitt.
+Det finst fleire storleikar med liknande navn og symbol som lett kan forvekslast — særleg når ein finn formlar på nett der omgrepa ofte er blanda saman. Dette notatet gir ei oversikt over alle dei vanlege typane, kva dei betyr, og korr dei blir brukt og formler på vanlige tversnitt.
 
 ---
 
@@ -40,7 +40,7 @@ Det finst fleire storleikar med liknande namn og symbol som lett kan forvekslast
 *Omtalt som andre arealmoment eller treghetsmoment*
 *(Second moment of area)*
 
-Treghetsmomentet $I$ beskriv **kor stivt eit tverrsnitt er mot bøying**. Jo meir areal som ligg langt frå nøytralaksen, jo høgare $I$ — og jo stivare er konstruksjonen. Det er difor I-bjelkar og rør er mykje stivare enn massive stenger med same masse.
+Treghetsmomentet $I$ beskriv **kor stivt eit tverrsnitt er mot bøying**. Jo meir areal som ligg langt frå nøytralaksen, jo høgare $I$ — og jo stivare er konstruksjonen. Det er derfor I-bjelkar og rør er mykje stivare enn massive stenger med same masse.
 
 Brukast i:
 - Nedbøyingsformlar (f.eks. $\delta = FL^3 / 48EI$ for midtlast på bjelke)
@@ -103,7 +103,7 @@ der $c$ = avstand frå nøytralaksen til ytterfiber (der spenningen er størst).
 | **Rektangel** — akse gjennom senter | $\large W_x = \dfrac{b h^2}{6}$ | ![[Moment_of_area_of_a_rectangle_through_the_centroid.png]] |
 | **Massiv aksel** — radius $r$ | $\large W_x = \dfrac{\pi r^3}{4}$ | ![[Moment_of_area_of_a_circle.png]] |
 | **Rør** — indre $r_1$, ytre $r_2$ | $\large W_x = \dfrac{\pi (r_2^4 - r_1^4)}{4 r_2}$ | ![[Moment_of_area_of_an_annulus.png]] |
-| **Rektangulært hulprofil** — ytre $b \times h$, indre $b_1 \times h_1$ | $\large I_x = \dfrac{b h^2 - b_1 h_1^2}{6}$ | ![[Moment_of_area_of_a_hollow_rectangle.png]] |
+| **Rektangulært hulprofil** — ytre $b \times h$, indre $b_1 \times h_1$ | $\large W_x = \dfrac{b h^2 - b_1 h_1^2}{6}$ | ![[Moment_of_area_of_a_hollow_rectangle.png]] |
 </div>
 
 > For samanstilte tverrsnitt: Bruk Steiners sats til å finne $I$ for heile tverrsnittet, og finn deretter $c$ som avstand frå nøytralaksen til ytterfiber. Så er $W = I/c$.
@@ -167,7 +167,7 @@ der $r$ = avstand frå senter til ytterfiber (største $r$ i tverrsnittet).
 | --- | --- | --- |
 | **Massiv aksel** — radius $r$ | $\large W_t = \dfrac{\pi r^3}{2}$ | ![[treghetsmoment_aksel_sylinderakse.png]] |
 | **Rør** — indre $r_1$, ytre $r_2$ | $\large W_t = \dfrac{\pi (r_2^4 - r_1^4)}{2 r_2}$ | ![[treghetsmoment_sylinder.png]] |
-| **Rektangel** — breidde $b$, høgde $h$ | $\large W_t = \dfrac{b h \sqrt{b^2 + h^2}}{6}$ | ![[treghetsmoment_plate.png]] |
+| **Rektangel** — breidde $b$, høgde $a$ | $\large W_t = \dfrac{b a \sqrt{b^2 + a^2}}{6}$ | ![[treghetsmoment_plate.png]] |
 </div>
 
 > **NB — viktig for rektangel:** For eit rektangulært tverrsnitt under torsjon oppstår den faktiske maksimale skjærspenning **ikkje** i hjørna (der $r$ er størst), men i midten av den lengste sida. Den geometriske formelen ovanfor gir difor eit noko optimistisk (for lågt) spenningsestimat. For presis berekning av rektangulære tverrsnitt under torsjon bør ein bruke Saint-Venants torsjonsteori og tabellverdiar.

@@ -15,7 +15,7 @@ updated: 2026-03-24
 
 Berekner gjennomsnittleg strømningshastighet for vatn i rør.
 
-Formelen som vert nytta:
+Formelen som blir nytta:
 
 $$v = \frac{Q}{A} = \frac{Q/60\,000}{\pi \cdot (d/2)^2 / 10^6}$$
 

@@ -6,6 +6,7 @@ tags:
   - Gjenger
   - fasteners
 type: referanse
+search_words: M
 updated: 2026-03-22
 ---
 
