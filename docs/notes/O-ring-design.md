@@ -15,11 +15,28 @@ updated: 2026-03-22
 
 # O-Ring
 
-## ID/OD
-- **Oring i OD-spor** skal oringen strekkes litt (Max 5%)
-- **Oring i ID-spor** skal oringen være litt større enn ID på spor (Max 2%)
-- **Flesntett med trykk fra utside** må oringen ha litt strekk mot ID av sporet (Max 5%)
-- **Flenstett med trykk fra innside må oringen ligge med litt press mot ytterdia av spor (Max 3%)
+Super kilde for alt om O-ringer fra design, materialer, standar størrelser, shelf life, og masse meir.
+Berre klikk deg under menyen Resources
+
+[Global O-ring](https://www.globaloring.com/oring-size-charts/)
+
+# O-ring design basics
+Generelle regler og toleranser for design av O-ring tetninger.
+
+Jo større tversnitt på O-ringen jo grovare toleranser, så viss ikkje pris eller størrelse er viktig, gå for en feit O-ring.
+
+## Design rekkefølge.
+ - 1 Velg tversnitt på Oringen, Ofte kalt CS (cross section)
+ - 2 Bestem spordybde for å få rett klem på O-ringen
+ - 3 (Om tetning mellom aksel og boss) Finn O-ring diameter som gir rett forspenn, stretch mot aksel eller kompressjon mot boss.
+ - 3 (Om tetning mellom 2 flenser) Finn O-ring diameter og bestem inner eller ytterdiameter på sporet slik at du får rett forspenn mot inner eller yttervegg.
+ - 4 Bestem sporbredden for å få korrekt fyllingsgrad.
+
+## Forspenn - ID/OD
+- **Oring i OD-spor/Spor i aksel** skal oringen strekkes litt (Max 5%)
+- **Oring i ID-spor/Spor i boss** skal oringen være litt større enn ID på spor (Max 2%)
+- **Flens mot flens med trykk fra utside** må oringen ha litt strekk mot ID av sporet (Max 5%)
+- **Flens mot flens med trykk fra innside** må oringen ligge med litt press mot ytterveggen av sporet (Max 3%)
 
 ### Kompression
 Forholdet mellom høyden på O-ringen før og etter montasje er kompressionsforholdet.
@@ -32,22 +49,25 @@ Fyllingsgraden bør være Min 50%, Ønsket 65-75%, Max 85%
 
 ### Ekstrudering og klaring
 Klaringen som O-ringen kan ekstruderes har stor betydning for trykket som som tåles.
+
 ![[O-ring extrusion chart.png]]
+
+Bildet er hentet fra [Global Oring](https://www.globaloring.com/)
 
 
 ### Shore A Durometer
-**25 Durometer = Rubber Band**  
-**55 Durometer = Inner Tube**  
-**70 Durometer (MOST COMMON) = Rubber Tire/Rubber Shoe Heel**  
-**95 Durometer = Shopping Cart Wheel**
+**25 Durometer = Gummistrikk**  
+**55 Durometer = Sykkelslange / Inner Tube**  
+**70 Durometer (Mest vanlig) = Bildekk**  
+**95 Durometer = Handlevogn dekk**
 
 
 ### Havari / Failure
-[Causes for O-Ring Failure | Global O-Ring and Seal](https://www.globaloring.com/causes-for-o-ring-failure/)
+[Årsaker og illustrasjoner med forklaring | Global O-Ring and Seal](https://www.globaloring.com/causes-for-o-ring-failure/)
 
 
 ### Materialer
-[Compounds | Global O-Ring and Seal](https://www.globaloring.com/compounds/)
+[Ulike Oring materialer | Global O-Ring and Seal](https://www.globaloring.com/compounds/)
 
 | O-Ring Compounds                                                                                                                                                                                                                                             | Material                                                      | Data Sheet                                                                                                                                                      | Description                    | Durometer | Color | Temp Range (F) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ | --------- | ----- | -------------- |

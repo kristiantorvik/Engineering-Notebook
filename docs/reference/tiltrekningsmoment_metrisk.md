@@ -56,7 +56,7 @@ For å berekne tiltrekningsmoment, løsningsmoment, forspenning etc:
 ###   Info
 Første tall  et i kod  en 8.8 be   tyr bruddstyrken på skruen i 100 $MPa$
 Det andre tallet er flytegrensens prosentandel av bruddstyrken.
-Eksempelvis vil en 12.9 bolt ha 1200$MPa$ brudd styrke og 108$MPa$ flytegrense.
+Eksempelvis vil en 12.9 bolt ha 1200$MPa$ brudd styrke og 1080$MPa$ flytegrense.
 
 For rustfrie skruer står det ofte "A4-80" der A4 eller A2 refererer til hvor korrosjonsbestandig legeringen er. Taller 80 eller ofte 70 refererer til bruddstyrken EKS: A4-70  →  700$MPa$
 

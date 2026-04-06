@@ -5,7 +5,7 @@ tags:
   - Hydraulikk
   - Pumpe
   - Strømning
-  - Trukk
+  - Trykk
   - Veske
   - Fluidynamikk
   - Fysikk
