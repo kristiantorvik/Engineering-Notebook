@@ -90,6 +90,7 @@ nav:
       - Enhetsomformer: calculators/unit-converter.md
       - Termodynamikk-tabeller: calculators/thermodynamics.md
       - Rørstrøm og pumpe: calculators/pipe-flow-calculator.md
+      - Gjengekalkulator: calculators/thread-calculator.md
   - Referanse-data:
       - reference/index.md
       - Material-egenskaper: reference/material-egenskaper.md

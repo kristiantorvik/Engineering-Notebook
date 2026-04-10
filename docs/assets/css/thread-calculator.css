@@ -1,0 +1,201 @@
+/* thread-calculator.css
+   Styles for the thread calculator.
+   CSS namespace: .thr-*
+   Uses Material theme CSS variables for consistent theming.
+*/
+
+/* ── Family illustration ─────────────────────────────────────────────────────── */
+
+.thr-family-img {
+  display: block;
+  max-height: 130px;
+  width: auto;
+  margin: 0.6rem auto 1.2rem;
+  opacity: 0.80;
+  /* Invert black-on-white drawings for the dark slate theme */
+  filter: invert(1) brightness(0.80);
+}
+
+/* ── Section blocks ─────────────────────────────────────────────────────────── */
+
+.thr-section-block {
+  margin: 1.4rem 0 0.6rem;
+}
+
+.thr-section-header {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color--light);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ── Input grids ─────────────────────────────────────────────────────────────── */
+
+.thr-grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.thr-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Field groups (label + input) ───────────────────────────────────────────── */
+
+.thr-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.3rem;
+}
+
+.thr-group label {
+  font-size: 0.78rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.2rem;
+}
+
+.thr-group input[type="number"],
+.thr-group select {
+  padding: 0.38rem 0.55rem;
+  font-size: 0.92rem;
+  font-family: var(--md-code-font-family);
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 3px;
+  max-width: 280px;
+  box-sizing: border-box;
+}
+
+.thr-group input[type="number"]:focus,
+.thr-group select:focus {
+  border-color: var(--md-primary-fg-color);
+  outline: none;
+}
+
+.thr-group input[type="number"]:invalid,
+.thr-group input[type="number"]:out-of-range {
+  border-color: #e53935;
+}
+
+.thr-group select {
+  cursor: pointer;
+}
+
+/* ── Results table ───────────────────────────────────────────────────────────── */
+
+.thr-table-wrapper {
+  overflow-x: auto;
+  margin-top: 0.4rem;
+}
+
+.thr-results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  min-width: 380px;
+}
+
+.thr-results-table th {
+  background: var(--md-code-bg-color);
+  font-weight: 600;
+  font-size: 0.76rem;
+  text-align: center;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  padding: 0.35rem 0.65rem;
+  white-space: nowrap;
+}
+
+.thr-results-table th.thr-th-label {
+  text-align: left;
+  min-width: 180px;
+}
+
+.thr-results-table td {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  padding: 0.32rem 0.65rem;
+  font-family: var(--md-code-font-family);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.thr-results-table td.thr-td-label {
+  font-family: var(--md-text-font-family, inherit);
+  text-align: left;
+  font-size: 0.82rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.thr-results-table td.thr-mid {
+  color: var(--md-accent-fg-color);
+  font-weight: 500;
+}
+
+.thr-results-table td.thr-td-unit {
+  font-family: var(--md-text-font-family, inherit);
+  font-size: 0.76rem;
+  color: var(--md-default-fg-color--light);
+  text-align: center;
+}
+
+/* Zebra stripes */
+.thr-results-table tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--md-code-bg-color) 60%, transparent 40%);
+}
+
+/* ── Warning and error banners ───────────────────────────────────────────────── */
+
+.thr-messages {
+  margin-top: 0.75rem;
+}
+
+.thr-warning {
+  background: color-mix(in srgb, var(--md-code-bg-color) 80%, #f5a623 15%);
+  border-left: 3px solid #f5a623;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.83rem;
+  border-radius: 2px;
+  margin-bottom: 0.4rem;
+}
+
+.thr-error {
+  background: color-mix(in srgb, var(--md-code-bg-color) 80%, #e53935 15%);
+  border-left: 3px solid #e53935;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.83rem;
+  border-radius: 2px;
+  margin-bottom: 0.4rem;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────────── */
+
+@media (max-width: 760px) {
+  .thr-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .thr-results-table {
+    font-size: 0.76rem;
+  }
+
+  .thr-results-table td,
+  .thr-results-table th {
+    padding: 0.25rem 0.4rem;
+  }
+
+  .thr-group input[type="number"],
+  .thr-group select {
+    max-width: 100%;
+  }
+}
