@@ -89,6 +89,17 @@
   margin-top: 0.5rem;
 }
 
+.pf-notice {
+  font-size: 0.88rem;
+  padding: 0.55rem 0.8rem;
+  margin-top: 0.5rem;
+  background: color-mix(in srgb, var(--md-code-bg-color) 82%, #ffc107 18%);
+  border-left: 3px solid #ffc107;
+  border-radius: 0.25rem;
+  color: var(--md-default-fg-color);
+  line-height: 1.55;
+}
+
 /* --- Results area -------------------------------------------- */
 .pf-results {
   margin-top: 1.5rem;

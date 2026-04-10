@@ -1,6 +1,6 @@
 ---
 title: Enhetsomformer
-summary: Konverter mellom enheter i nærmest alle kategorier som Temperatur, Lengde, Masse, Energi, Effekt, Fart, Volum, Areal, Gjennomstrømnin, Vinkel, Drivstofforbruk, Tid, Trykk, Digital lagring.
+summary: Konverter mellom enheter i nærmest alle kategorier som Temperatur, Lengde, Masse, Energi, Effekt, Fart, Volum, Areal, Gjennomstrømning, Vinkel, Drivstofforbruk, Tid, Trykk, Dreiemoment, Kraft, Frekvens, Digital lagring.
 tags:
   - Konvertering
   - Enheter
@@ -211,6 +211,9 @@ Velg kategori, skriv inn en verdi og velg enheter for å konvertere.
     { id: "fuel",        name: "Drivstofforbruk" },
     { id: "time",        name: "Tid" },
     { id: "pressure",    name: "Trykk" },
+    { id: "torque",      name: "Dreiemoment" },
+    { id: "force",       name: "Kraft" },
+    { id: "frequency",   name: "Frekvens / Rotasjon" },
     { id: "digital",     name: "Digital lagring" },
   ];
 
@@ -382,6 +385,41 @@ Velg kategori, skriv inn en verdi og velg enheter for å konvertere.
       { id: "MiB", name: "Mebibyte (MiB)",  factor: 1048576 },
       { id: "GiB", name: "Gibibyte (GiB)",  factor: 1073741824 },
       { id: "TiB", name: "Tebibyte (TiB)",  factor: 1099511627776 },
+    ],
+
+    /* Base unit: N·m */
+    torque: [
+      { id: "Nm",    name: "Newtonmeter (N·m)",               factor: 1 },
+      { id: "Ncm",   name: "Newton-centimeter (N·cm)",         factor: 0.01 },
+      { id: "Nmm",   name: "Newton-millimeter (N·mm)",         factor: 0.001 },
+      { id: "kNm",   name: "Kilonewtonmeter (kN·m)",           factor: 1000 },
+      { id: "ftlb",  name: "Foot-pound (ft·lb)",               factor: 1.3558179483314 },
+      { id: "inlb",  name: "Inch-pound (in·lb)",               factor: 0.11298482902763 },
+      { id: "inoz",  name: "Inch-ounce (in·oz)",               factor: 0.0070615517517268 },
+      { id: "kgfm",  name: "Kilogram-kraft meter (kgf·m)",     factor: 9.80665 },
+      { id: "kgfcm", name: "Kilogram-kraft centimeter (kgf·cm)", factor: 0.0980665 },
+    ],
+
+    /* Base unit: Newton */
+    force: [
+      { id: "N",   name: "Newton (N)",                    factor: 1 },
+      { id: "daN", name: "Dekanewton (daN)",               factor: 10 },
+      { id: "kN",  name: "Kilonewton (kN)",               factor: 1e3 },
+      { id: "MN",  name: "Meganewton (MN)",               factor: 1e6 },
+      { id: "kgf", name: "Kilogram-kraft (kgf)",           factor: 9.80665 },
+      { id: "tf",  name: "Tonn-kraft (tf)",                factor: 9806.65 },
+      { id: "lbf", name: "Pund-kraft (lbf)",               factor: 4.4482216152605 },
+      { id: "kip", name: "Kilo-pund-kraft (kip)",          factor: 4448.2216152605 },
+    ],
+
+    /* Base unit: Hz (1/s) */
+    frequency: [
+      { id: "Hz",     name: "Hertz (Hz)",                  factor: 1 },
+      { id: "kHz",    name: "Kilohertz (kHz)",             factor: 1e3 },
+      { id: "MHz",    name: "Megahertz (MHz)",             factor: 1e6 },
+      { id: "rpm",    name: "Omdreininger per minutt (rpm)", factor: 1 / 60 },
+      { id: "rads",   name: "Radian per sekund (rad/s)",   factor: 1 / (2 * Math.PI) },
+      { id: "radmin", name: "Radian per minutt (rad/min)", factor: 1 / (2 * Math.PI * 60) },
     ],
 
     /* Base unit: Pascal */

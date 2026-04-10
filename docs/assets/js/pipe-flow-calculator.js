@@ -168,11 +168,22 @@
     if (err) { err.textContent = ""; err.style.display = "none"; }
   }
 
+  function showNotice(msg) {
+    var el = document.getElementById("pf-notice");
+    if (el) { el.innerHTML = msg; el.style.display = "block"; }
+  }
+
+  function hideNotice() {
+    var el = document.getElementById("pf-notice");
+    if (el) el.style.display = "none";
+  }
+
   /* ----------------------------------------------------------
      Main calculate function — called by button
   ---------------------------------------------------------- */
   function pfCalc() {
     hideError();
+    hideNotice();
 
     // Read inputs
     var rho    = val("pf-rho");
@@ -223,6 +234,28 @@
 
     var Q = solve(params);
 
+    // Gravity-only reverse flow: if P=0 and reservoir 2 has more energy than reservoir 1,
+    // the flow goes 2→1. Re-solve with reservoirs swapped — same Bernoulli formula,
+    // same pipe parameters, just the driving side is flipped.
+    var flowReversed = false;
+    if ((Q === null || Q <= 0) && P_hyd === 0) {
+      var rg_check = rho * g;
+      var H_driving = (p1 - p2) / rg_check + (y1 - y2); // positive = drives 1→2
+      if (H_driving < 0) {
+        var paramsRev = {
+          rho: rho, nu: nu, P_hyd: 0,
+          p1: p2, p2: p1, y1: y2, y2: y1,
+          d_s: d_s_m, L_s: L_s, eps_s: eps_s_m, zeta_s: zeta_s,
+          d_t: d_t_m, L_t: L_t, eps_t: eps_t_m, zeta_t: zeta_t
+        };
+        var Q_rev = solve(paramsRev);
+        if (Q_rev !== null && Q_rev > 0) {
+          Q = Q_rev;
+          flowReversed = true;
+        }
+      }
+    }
+
     if (Q === null || Q <= 0) {
       // Diagnose why: compute the static head balance at near-zero flow.
       // H_static = (p2-p1)/(rho*g) + (y2-y1)
@@ -265,19 +298,37 @@
 
     var Hp = P_hyd > 0 ? P_hyd / (rg * Q) : 0;
 
-    // Pressure at pump inlet (Bernoulli from reservoir 1 to pump inlet)
-    var p_suction   = p1 + rg * y1
+    // For reversed gravity flow, swap reservoir labels so directional quantities
+    // (pressure at pipe inlet, height difference, pressure head) reflect the
+    // actual driving side. Pipe-side results (v, Re, f, losses) are unchanged.
+    var ep1 = flowReversed ? p2 : p1;
+    var ey1 = flowReversed ? y2 : y1;
+    var ep2 = flowReversed ? p1 : p2;
+    var ey2 = flowReversed ? y1 : y2;
+
+    // Pressure at pipe inlet (Bernoulli from effective reservoir 1 to pipe junction)
+    var p_suction   = ep1 + rg * ey1
                       - 0.5 * rho * s.v * s.v
                       - rg * (s.h_major + s.h_minor);
 
-    // Pressure at pump outlet
+    // Pressure at pipe outlet (= p_suction when Hp = 0)
     var p_discharge = p_suction + rg * Hp;
 
     // Secondary outputs
-    var delta_y     = y2 - y1;                      // static height difference
-    var delta_p_head = (p2 - p1) / rg;              // pressure contribution [m]
+    var delta_y      = ey2 - ey1;                   // static height difference (flow direction)
+    var delta_p_head = (ep2 - ep1) / rg;            // pressure contribution [m]
     var Q_Ls   = Q * 1000;                           // m^3/s → L/s
     var Q_Lmin = Q_Ls * 60;                          // L/s → L/min
+
+    // Show directional notice for reversed gravity flow
+    if (flowReversed) {
+      showNotice(
+        "<strong>NB: Strøm går fra reservoar 2 til reservoar 1.</strong><br>" +
+        "Reservoar 2 har høyere energinivå enn reservoar 1. " +
+        "Strømningshastigheter og tapshøyder er korrekte for hvert rørstrekk. " +
+        "Trykk ved pumpeinngang er beregnet fra reservoar 2 som drivende side."
+      );
+    }
 
     // --- Render primary outputs ---
     set("pf-r-Q_Ls",    fmt(Q_Ls, 2)   + " L/s");

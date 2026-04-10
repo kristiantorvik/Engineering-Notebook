@@ -26,7 +26,7 @@ Berekner forholdet mellom krefter over eit reimhjul eller lignande. Kan brukast 
 ## Formel
 
 $$
-F_1 = F_2 \cdot e^{\mu \cdot \alpha}
+\large F_1 = F_2 \cdot e^{\mu \cdot \alpha}
 $$
 
 ---

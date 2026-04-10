@@ -1,0 +1,244 @@
+/* ── Fraksjonskalkulator – tommer-fraksjonskalkulator.css ── */
+
+/* Section heading */
+.fi-section {
+  margin: 1.4rem 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color--light);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.3rem;
+}
+
+/* Input grid: 2 columns, collapses on narrow screens */
+.fi-input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .fi-input-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Label + input column container */
+.fi-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.22rem;
+}
+
+.fi-group label {
+  font-size: 0.78rem;
+  color: var(--md-default-fg-color--light);
+  font-weight: 600;
+}
+
+/* Input row: input + unit suffix */
+.fi-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.fi-input-row input[type="number"] {
+  flex: 1;
+  min-width: 0;
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 3px;
+  padding: 0.38rem 0.55rem;
+  font-size: 0.9rem;
+  font-family: var(--md-code-font-family);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.fi-input-row input[type="number"]:focus {
+  border-color: var(--md-accent-fg-color);
+}
+
+.fi-unit {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  white-space: nowrap;
+  font-family: var(--md-code-font-family);
+}
+
+
+/* Calculate button */
+.fi-btn {
+  display: inline-block;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.92rem;
+  font-family: var(--md-text-font-family);
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: opacity 0.15s;
+}
+
+.fi-btn:hover {
+  opacity: 0.85;
+}
+
+/* Error text */
+.fi-error {
+  color: #e53935;
+  font-size: 0.88rem;
+  padding: 0.4rem 0;
+  margin-top: 0.3rem;
+}
+
+/* Results divider */
+.fi-divider {
+  margin: 1.2rem 0 1rem;
+  border: none;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Result sub-heading */
+.fi-result-heading {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color--light);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0.8rem 0 0.4rem;
+}
+
+/* KV summary card grid */
+.fi-kv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.fi-kv {
+  background: var(--md-code-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 3px;
+  padding: 0.55rem 0.8rem;
+}
+
+.fi-kv.fi-kv-accent {
+  border-color: var(--md-accent-fg-color);
+}
+
+.fi-kv-label {
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.12rem;
+}
+
+.fi-kv-value {
+  font-size: 1.05rem;
+  font-family: var(--md-code-font-family);
+  color: var(--md-accent-fg-color);
+}
+
+/* Color legend */
+.fi-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1rem;
+  font-size: 0.76rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.fi-leg {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 0.25rem;
+  vertical-align: middle;
+}
+
+.fi-leg-green  { background: #4caf50; }
+.fi-leg-yellow { background: #ffc107; }
+.fi-leg-red    { background: #757575; }
+
+/* Table */
+.fi-table-wrapper {
+  overflow-x: auto;
+  margin-top: 0.3rem;
+}
+
+.fi-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  min-width: 380px;
+}
+
+.fi-table th {
+  background: var(--md-code-bg-color);
+  font-weight: 600;
+  font-size: 0.76rem;
+  text-align: right;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  padding: 0.35rem 0.7rem;
+  white-space: nowrap;
+  color: var(--md-default-fg-color--light);
+}
+
+.fi-th-frac {
+  text-align: left;
+}
+
+.fi-table td {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  padding: 0.3rem 0.7rem;
+  font-family: var(--md-code-font-family);
+  text-align: right;
+  white-space: nowrap;
+  color: var(--md-default-fg-color);
+}
+
+.fi-cell-frac {
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Row color-coding: left border + subtle tinted background */
+.fi-row-green {
+  border-left: 3px solid #4caf50 !important;
+  background: color-mix(in srgb, var(--md-code-bg-color) 88%, #4caf50 12%);
+}
+
+.fi-row-yellow {
+  border-left: 3px solid #ffc107 !important;
+  background: color-mix(in srgb, var(--md-code-bg-color) 88%, #ffc107 12%);
+}
+
+.fi-row-red {
+  border-left: 3px solid var(--md-default-fg-color--lightest) !important;
+}
+
+.fi-row-green td,
+.fi-row-yellow td,
+.fi-row-red td {
+  border-left: none;
+}
+
+/* Hint text below calculator */
+.fi-note {
+  font-size: 0.77rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.6rem;
+  font-style: italic;
+}

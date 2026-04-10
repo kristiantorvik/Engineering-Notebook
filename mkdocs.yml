@@ -91,6 +91,7 @@ nav:
       - Termodynamikk-tabeller: calculators/thermodynamics.md
       - Rørstrøm og pumpe: calculators/pipe-flow-calculator.md
       - Gjengekalkulator: calculators/thread-calculator.md
+      - Fraksjonskalkulator: calculators/tommer-fraksjonskalkulator.md
   - Referanse-data:
       - reference/index.md
       - Material-egenskaper: reference/material-egenskaper.md

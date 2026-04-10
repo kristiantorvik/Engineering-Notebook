@@ -142,6 +142,7 @@ Vann: $\rho = 1000$    $\nu = 0.000001$
 <!-- ── Beregn-knapp ─────────────────────────────────────── -->
 <button class="pf-btn" id="pf-btn">Beregn</button>
 
+<div id="pf-notice" class="pf-notice" style="display:none"></div>
 <div id="pf-error" class="pf-error" style="display:none"></div>
 
 <!-- ── Resultater ────────────────────────────────────────── -->

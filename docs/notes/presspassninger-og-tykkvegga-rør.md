@@ -14,6 +14,7 @@ updated: 2026-03-22
 
 Deformasjon og spenninger ved presspasninger og spenninger i tykkvegga rør
 For eksempel og beregninger bruker eg følgande notasjon og variabler.
+Du kan og bruka denna kalkulatoren i mange tilfeller som bruker disse formlane: [Presspassning kalkulator](../calculators/press-fit-calculator.md)
 
 ## Bruk
 For å berekna nødvendig presspassning bruk nødvendig holdekraft og friksjonskoeffisient til å finne nødvendig flatetrykk $P$
