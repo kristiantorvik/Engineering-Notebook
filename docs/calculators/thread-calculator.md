@@ -35,6 +35,12 @@ Men detta va mykje meir jobb en eg hadde sett for meg å gjera skikkelig...
 <script src="../../assets/js/thread-calculator/families/npt/data.js"></script>
 <script src="../../assets/js/thread-calculator/families/npt/config.js"></script>
 <script src="../../assets/js/thread-calculator/families/npt/compute.js"></script>
+<script src="../../assets/js/thread-calculator/families/bspt/data.js"></script>
+<script src="../../assets/js/thread-calculator/families/bspt/config.js"></script>
+<script src="../../assets/js/thread-calculator/families/bspt/compute.js"></script>
+<script src="../../assets/js/thread-calculator/families/bspp/data.js"></script>
+<script src="../../assets/js/thread-calculator/families/bspp/config.js"></script>
+<script src="../../assets/js/thread-calculator/families/bspp/compute.js"></script>
 <script src="../../assets/js/thread-calculator/registry.js"></script>
 <script src="../../assets/js/thread-calculator/ui.js"></script>
 <script src="../../assets/js/thread-calculator/main.js"></script>

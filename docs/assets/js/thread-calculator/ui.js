@@ -474,6 +474,9 @@
       "npt_size":         state.nptSizeKey,
       "input_target_pct": state.inputTargetPct,
       "input_wire_dia":   state.inputWireDia || "",  // empty = auto (placeholder shows best wire)
+      "bspt_size":        state.bsptSizeKey,
+      "bspp_size":        state.bsppSizeKey,
+      "bspp_ext_class":   state.bsppExtClass,
     };
     var v = map[fieldId];
     return (v !== undefined) ? v : null;

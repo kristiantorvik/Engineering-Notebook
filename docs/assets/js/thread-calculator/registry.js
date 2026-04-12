@@ -53,6 +53,8 @@
   // ── Register built-in families (V1) ─────────────────────────────────────────
   TC.registry.register("iso-metric-60", TC.families["iso-metric-60"]);
   TC.registry.register("npt",           TC.families["npt"]);
+  TC.registry.register("bspt",          TC.families["bspt"]);
+  TC.registry.register("bspp",          TC.families["bspp"]);
 
   // To add more families later, add lines here, e.g.:
   // TC.registry.register("iso-trapezoidal-30", TC.families["iso-trapezoidal-30"]);

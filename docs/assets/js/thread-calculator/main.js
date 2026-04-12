@@ -62,6 +62,15 @@
       case "input_wire_dia":
         s.inputWireDia = TC.parse.float(rawValue) || 0;
         break;
+      case "bspt_size":
+        s.bsptSizeKey = rawValue;
+        break;
+      case "bspp_size":
+        s.bsppSizeKey = rawValue;
+        break;
+      case "bspp_ext_class":
+        s.bsppExtClass = rawValue;
+        break;
       // Future fields can be added here without touching ui.js or compute modules
     }
 
