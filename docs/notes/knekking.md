@@ -45,6 +45,7 @@ $L_k  =$ Stavens effektive lengde er lengden ganget med korreksjonsfaktor for in
 $i =$ Treghetsradius
 $I =$ Treghetsmoment (andre arealmoment)
 $\lambda_g =$ Geometrisk slankhetstall
+
 $$\text{Geometrisk slankhet:}\quad \Large \boxed{\lambda_g = \dfrac{L_k}{i}}$$
 
 **Normalisert slankhet** er en "forbedret" slankhetsmodell som blir brukt i berekninger i henhold til Eurokode. Den tar hensyn til materialets egenskaper og gir et bedre bilde på kor nærme søylen er å nå flytegrensen før knekking oppstår. Normalisert slankhet får ofte notasjon som $\lambda_{norm} \ , \:  \overline{\lambda} \ , \: \lambda'$

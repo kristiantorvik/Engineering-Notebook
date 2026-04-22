@@ -18,7 +18,7 @@ Berekner forholdet mellom krefter over eit reimhjul eller lignande. Kan brukast 
 
 ---
 
-![[tau_friksjon.png]]
+![[tau_friksjon.png|300]]
 
 ---
 

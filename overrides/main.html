@@ -3,8 +3,8 @@
 {% block scripts %}
 {{ super() }}
 <script>
-  // Open external links in a new tab
   document.addEventListener("DOMContentLoaded", function () {
+    // Open external links in a new tab
     document.querySelectorAll("a[href]").forEach(function (a) {
       var href = a.getAttribute("href");
       if (href && href.startsWith("http") && !href.includes(window.location.hostname)) {
@@ -12,6 +12,43 @@
         a.setAttribute("rel", "noopener noreferrer");
       }
     });
+
+    // A4 portrait at 96 CSS dpi, minus 1.5cm margins each side and 1em padding
+    var NB_PRINT_WIDTH = 640;
+
+    function nbApplyPrintZoom() {
+      var typeset = document.querySelector('.md-typeset');
+      if (!typeset) return;
+      typeset.style.zoom = '';
+      void typeset.offsetWidth; // flush so offsetWidth reads are fresh
+
+      // Measure individual elements — more reliable than scrollWidth on the container
+      // because ancestor overflow:hidden can hide table overflow from scrollWidth
+      var maxW = 0;
+      typeset.querySelectorAll('table, pre, .arithmatex').forEach(function (el) {
+        maxW = Math.max(maxW, el.offsetWidth);
+      });
+
+      if (maxW > NB_PRINT_WIDTH) {
+        typeset.style.zoom = (NB_PRINT_WIDTH / maxW).toFixed(4);
+        void typeset.offsetWidth; // flush so zoom takes effect before print frame is captured
+      }
+    }
+
+    window.addEventListener('beforeprint', nbApplyPrintZoom);
+    window.addEventListener('afterprint', function () {
+      var typeset = document.querySelector('.md-typeset');
+      if (typeset) typeset.style.zoom = '';
+    });
+
+    // Floating print button — let beforeprint handle zoom, so measurement is in print-mode layout
+    var btn = document.createElement("button");
+    btn.id = "nb-print-btn";
+    btn.title = "Skriv ut";
+    btn.setAttribute("aria-label", "Skriv ut siden");
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>';
+    btn.addEventListener("click", function () { window.print(); });
+    document.body.appendChild(btn);
   });
 </script>
 {% endblock %}

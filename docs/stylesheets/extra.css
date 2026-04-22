@@ -1,5 +1,54 @@
 /* ── Engineering Notebook — extra styles ─────────────────────────── */
 
+/* ── Floating print button ───────────────────────────────────────── */
+#nb-print-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 999;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+#nb-print-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55);
+}
+
+/* ── Print layout ────────────────────────────────────────────────── */
+@media print {
+  #nb-print-btn,
+  .md-header,
+  .md-sidebar,
+  .md-footer,
+  .md-tabs,
+  .md-search { display: none !important; }
+
+  .md-main__inner { margin: 0 !important; }
+  .md-content { max-width: 100% !important; }
+  .md-content__inner { margin: 0 !important; padding: 1em !important; }
+
+  /* Help tables compress before zoom is needed */
+  .md-typeset td,
+  .md-typeset th { overflow-wrap: break-word; word-break: break-word; }
+  .md-typeset img { max-width: 100% !important; height: auto !important; }
+
+  @page {
+    size: A4 portrait;
+    margin: 2cm 1.5cm;
+  }
+}
+
 /* ── Type badge colours ─────────────────────────────────────────── */
 :root {
   --nb-type-notat:    #4a90d9;

@@ -90,6 +90,11 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
 
         img_rel_to_docs = _image_index[key]
         rel_path = os.path.relpath(img_rel_to_docs, page_dir).replace("\\", "/")
+
+        if alt and re.fullmatch(r'\d+', alt.strip()):
+            # Numeric pipe value → width attribute (Obsidian-style sizing)
+            return f"![{Path(filename).stem}]({rel_path}){{ width=\"{alt.strip()}\" }}"
+
         alt_text = alt.strip() if alt else Path(filename).stem
         return f"![{alt_text}]({rel_path})"
 

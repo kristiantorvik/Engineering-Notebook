@@ -1,6 +1,6 @@
 ---
 title: Enhetsomformer
-summary: Konverter mellom enheter i nærmest alle kategorier som Temperatur, Lengde, Masse, Energi, Effekt, Fart, Volum, Areal, Gjennomstrømning, Vinkel, Drivstofforbruk, Tid, Trykk, Dreiemoment, Kraft, Frekvens, Digital lagring.
+summary: Konverter mellom enheter i nærmest alle kategorier som Temperatur, Lengde, Masse, Tetthet, Energi, Effekt, Fart, Volum, Areal, Gjennomstrømning, Vinkel, Drivstofforbruk, Tid, Trykk, Dreiemoment, Kraft, Frekvens, Digital lagring, varmeledningsevne, varmeovergangstall, termisk ekspansjonskoeffisient, arealtreghetsmoment og massetreghetsmoment.
 tags:
   - Konvertering
   - Enheter
@@ -9,12 +9,13 @@ tags:
   - Temperatur
 type: kalkulator
 search_words: Enhet, unit,
-updated: 2026-03-26
+updated: 2026-04-22
 ---
 
 # Enhetsomformer
 
 Velg kategori, skriv inn en verdi og velg enheter for å konvertere.
+Kategorilistene er sortert alfabetisk for å gjøre det raskere å finne riktig størrelse.
 
 <style>
 .uc-wrap {
@@ -198,24 +199,42 @@ Velg kategori, skriv inn en verdi og velg enheter for å konvertere.
 
   /* ─── Category list ──────────────────────────────────────────── */
   var TYPES = [
-    { id: "temperature", name: "Temperatur" },
-    { id: "length",      name: "Lengde" },
-    { id: "mass",        name: "Masse" },
-    { id: "energy",      name: "Energi" },
-    { id: "power",       name: "Effekt" },
-    { id: "speed",       name: "Fart" },
-    { id: "volume",      name: "Volum" },
-    { id: "area",        name: "Areal" },
-    { id: "flowrate",    name: "Gjennomstrømning" },
-    { id: "angle",       name: "Vinkel" },
-    { id: "fuel",        name: "Drivstofforbruk" },
-    { id: "time",        name: "Tid" },
-    { id: "pressure",    name: "Trykk" },
-    { id: "torque",      name: "Dreiemoment" },
-    { id: "force",       name: "Kraft" },
-    { id: "frequency",   name: "Frekvens / Rotasjon" },
-    { id: "digital",     name: "Digital lagring" },
+    { id: "area",                 name: "Areal" },
+    { id: "area_moment_inertia",  name: "Arealtreghetsmoment (2. arealmoment)" },
+    { id: "digital",              name: "Digital lagring" },
+    { id: "torque",               name: "Dreiemoment" },
+    { id: "fuel",                 name: "Drivstofforbruk" },
+    { id: "energy",               name: "Energi" },
+    { id: "power",                name: "Effekt" },
+    { id: "speed",                name: "Fart" },
+    { id: "frequency",            name: "Frekvens / Rotasjon" },
+    { id: "flowrate",             name: "Gjennomstrømning" },
+    { id: "force",                name: "Kraft" },
+    { id: "length",               name: "Lengde" },
+    { id: "mass",                 name: "Masse" },
+    { id: "mass_moment_inertia",  name: "Massetreghetsmoment" },
+    { id: "density",              name: "Tetthet" },
+    { id: "time",                 name: "Tid" },
+    { id: "pressure",             name: "Trykk" },
+    { id: "temperature",          name: "Temperatur" },
+    { id: "thermal_expansion",    name: "Termisk ekspansjonskoeffisient" },
+    { id: "volume",               name: "Volum" },
+    { id: "angle",                name: "Vinkel" },
+    { id: "dynamic_viscosity",    name: "Viskositet, dynamisk" },
+    { id: "kinematic_viscosity",  name: "Viskositet, kinematisk" },
+    { id: "heat_transfer_coefficient", name: "Varmeovergangstall" },
+    { id: "thermal_conductivity", name: "Varmeledningsevne" },
   ];
+
+  var EXACT = {
+    BTU_IT_J: 1055.05585262,
+    FOOT_M: 0.3048,
+    INCH_M: 0.0254,
+    LBF_N: 4.4482216152605,
+    POUND_KG: 0.45359237,
+    US_GALLON_M3: 0.003785411784,
+    UK_GALLON_M3: 0.00454609
+  };
 
   /* ─── Unit definitions ───────────────────────────────────────────
      Linear units: use `factor` (value × factor = base SI unit).
@@ -261,6 +280,23 @@ Velg kategori, skriv inn en verdi og velg enheter for å konvertere.
       { id: "st",   name: "Stone (st)",               factor: 6.35029318 },
       { id: "ston", name: "Short ton / US ton (tn)",  factor: 907.18474 },
       { id: "lton", name: "Long ton / imp. ton (LT)", factor: 1016.0469088 },
+    ],
+
+    density: [
+      { id: "kgm3",    name: "Kilogram per kubikkmeter (kg/m³)", factor: 1 },
+      { id: "kgL",     name: "Kilogram per liter (kg/L)",        factor: 1e3 },
+      { id: "tdm3",    name: "Tonn per kubikkmeter (t/m³)",      factor: 1e3 },
+      { id: "gcm3",    name: "Gram per kubikkcentimeter (g/cm³)", factor: 1e3 },
+      { id: "gmL",     name: "Gram per milliliter (g/mL)",       factor: 1e3 },
+      { id: "mgmm3",   name: "Milligram per kubikkmillimeter (mg/mm³)", factor: 1e3 },
+      { id: "lbft3",   name: "Pund per kubikkfot (lb/ft³)",
+        factor: EXACT.POUND_KG / Math.pow(EXACT.FOOT_M, 3) },
+      { id: "lbin3",   name: "Pund per kubikktomme (lb/in³)",
+        factor: EXACT.POUND_KG / Math.pow(EXACT.INCH_M, 3) },
+      { id: "lbgalUS", name: "Pund per US gallon (lb/gal US)",
+        factor: EXACT.POUND_KG / EXACT.US_GALLON_M3 },
+      { id: "lbgalUK", name: "Pund per imperial gallon (lb/gal imp)",
+        factor: EXACT.POUND_KG / EXACT.UK_GALLON_M3 },
     ],
 
     energy: [
@@ -410,6 +446,78 @@ Velg kategori, skriv inn en verdi og velg enheter for å konvertere.
       { id: "tf",  name: "Tonn-kraft (tf)",                factor: 9806.65 },
       { id: "lbf", name: "Pund-kraft (lbf)",               factor: 4.4482216152605 },
       { id: "kip", name: "Kilo-pund-kraft (kip)",          factor: 4448.2216152605 },
+    ],
+
+    /* Base unit: Pa·s */
+    dynamic_viscosity: [
+      { id: "Pas",      name: "Pascal-sekund (Pa·s)",                  factor: 1 },
+      { id: "mPas",     name: "Millipascal-sekund (mPa·s)",            factor: 1e-3 },
+      { id: "uPas",     name: "Mikropascal-sekund (µPa·s)",            factor: 1e-6 },
+      { id: "P",        name: "Poise (P)",                             factor: 1e-1 },
+      { id: "cP",       name: "Centipoise (cP)",                       factor: 1e-3 },
+      { id: "lbfts",    name: "Pund per fot-sekund [lb/(ft·s)]",       factor: EXACT.POUND_KG / EXACT.FOOT_M },
+      { id: "lbfstft2", name: "Pund-kraft-sekund per kvadratfot [lbf·s/ft²]", factor: EXACT.LBF_N / (EXACT.FOOT_M * EXACT.FOOT_M) },
+    ],
+
+    /* Base unit: m²/s */
+    kinematic_viscosity: [
+      { id: "m2s",   name: "Kvadratmeter per sekund (m²/s)",        factor: 1 },
+      { id: "cm2s",  name: "Kvadratcentimeter per sekund (cm²/s)",  factor: 1e-4 },
+      { id: "mm2s",  name: "Kvadratmillimeter per sekund (mm²/s)",  factor: 1e-6 },
+      { id: "St",    name: "Stokes (St)",                           factor: 1e-4 },
+      { id: "cSt",   name: "Centistokes (cSt)",                     factor: 1e-6 },
+      { id: "ft2s",  name: "Kvadratfot per sekund (ft²/s)",         factor: EXACT.FOOT_M * EXACT.FOOT_M },
+    ],
+
+    /* Base unit: W/(m·K) */
+    thermal_conductivity: [
+      { id: "WmK",       name: "Watt per meter-kelvin [W/(m·K)]", factor: 1 },
+      { id: "WmC",       name: "Watt per meter-grad Celsius [W/(m·°C)]", factor: 1 },
+      { id: "mWmK",      name: "Milliwatt per meter-kelvin [mW/(m·K)]", factor: 1e-3 },
+      { id: "kWmK",      name: "Kilowatt per meter-kelvin [kW/(m·K)]", factor: 1e3 },
+      { id: "WcmK",      name: "Watt per centimeter-kelvin [W/(cm·K)]", factor: 100 },
+      { id: "BTUithftF", name: "BTU(IT) per time-fot-grad Fahrenheit [BTU(IT)/(h·ft·°F)]",
+        factor: (EXACT.BTU_IT_J / 3600) * (1 / EXACT.FOOT_M) * (9 / 5) },
+    ],
+
+    /* Base unit: W/(m²·K) */
+    heat_transfer_coefficient: [
+      { id: "Wm2K",         name: "Watt per kvadratmeter-kelvin [W/(m²·K)]", factor: 1 },
+      { id: "Wm2C",         name: "Watt per kvadratmeter-grad Celsius [W/(m²·°C)]", factor: 1 },
+      { id: "kWm2K",        name: "Kilowatt per kvadratmeter-kelvin [kW/(m²·K)]", factor: 1e3 },
+      { id: "mWm2K",        name: "Milliwatt per kvadratmeter-kelvin [mW/(m²·K)]", factor: 1e-3 },
+      { id: "BTUithft2F",   name: "BTU(IT) per time-kvadratfot-grad Fahrenheit [BTU(IT)/(h·ft²·°F)]", factor: (EXACT.BTU_IT_J / 3600) * (1 / (EXACT.FOOT_M * EXACT.FOOT_M)) * (9 / 5) },
+    ],
+
+    /* Base unit: 1/K */
+    thermal_expansion: [
+      { id: "perK",      name: "Per kelvin (1/K)",               factor: 1 },
+      { id: "perC",      name: "Per grad Celsius (1/°C)",        factor: 1 },
+      { id: "perF",      name: "Per grad Fahrenheit (1/°F)",     factor: 9 / 5 },
+      { id: "perR",      name: "Per grad Rankine (1/°R)",        factor: 9 / 5 },
+      { id: "ppmK",      name: "ppm per kelvin (ppm/K)",         factor: 1e-6 },
+      { id: "ppmC",      name: "ppm per grad Celsius (ppm/°C)",  factor: 1e-6 },
+      { id: "um_mK",     name: "Mikrometer per meter-kelvin [µm/(m·K)]", factor: 1e-6 },
+      { id: "um_mC",     name: "Mikrometer per meter-grad Celsius [µm/(m·°C)]", factor: 1e-6 },
+    ],
+
+    /* Base unit: m^4 */
+    area_moment_inertia: [
+      { id: "mm4", name: "Millimeter i fjerde (mm⁴)", factor: Math.pow(1e-3, 4) },
+      { id: "cm4", name: "Centimeter i fjerde (cm⁴)", factor: Math.pow(1e-2, 4) },
+      { id: "m4",  name: "Meter i fjerde (m⁴)",       factor: 1 },
+      { id: "in4", name: "Tomme i fjerde (in⁴)",      factor: Math.pow(EXACT.INCH_M, 4) },
+      { id: "ft4", name: "Fot i fjerde (ft⁴)",        factor: Math.pow(EXACT.FOOT_M, 4) },
+    ],
+
+    /* Base unit: kg·m² */
+    mass_moment_inertia: [
+      { id: "kgm2", name: "Kilogrammeterkvadrat (kg·m²)", factor: 1 },
+      { id: "gcm2", name: "Gram-centimeterkvadrat (g·cm²)", factor: 1e-7 },
+      { id: "kgcm2", name: "Kilogram-centimeterkvadrat (kg·cm²)", factor: 1e-4 },
+      { id: "lbin2", name: "Pund-tommekvadrat (lb·in²)", factor: EXACT.POUND_KG * Math.pow(EXACT.INCH_M, 2) },
+      { id: "lbft2", name: "Pund-fotkvadrat (lb·ft²)", factor: EXACT.POUND_KG * Math.pow(EXACT.FOOT_M, 2) },
+      { id: "ozin2", name: "Unse-tommekvadrat (oz·in²)", factor: (EXACT.POUND_KG / 16) * Math.pow(EXACT.INCH_M, 2) },
     ],
 
     /* Base unit: Hz (1/s) */
@@ -585,7 +693,9 @@ Velg kategori, skriv inn en verdi og velg enheter for å konvertere.
   /* ─── Initialise category dropdown ───────────────────────────── */
   (function init() {
     var typeSelect = el("uc-type");
-    TYPES.forEach(function(t) {
+    TYPES.slice().sort(function(a, b) {
+      return a.name.localeCompare(b.name, "nb");
+    }).forEach(function(t) {
       var opt = document.createElement("option");
       opt.value = t.id;
       opt.textContent = t.name;
