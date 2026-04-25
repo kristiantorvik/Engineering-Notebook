@@ -478,6 +478,18 @@ Kategorilistene er sortert alfabetisk for å gjøre det raskere å finne riktig 
       { id: "WcmK",      name: "Watt per centimeter-kelvin [W/(cm·K)]", factor: 100 },
       { id: "BTUithftF", name: "BTU(IT) per time-fot-grad Fahrenheit [BTU(IT)/(h·ft·°F)]",
         factor: (EXACT.BTU_IT_J / 3600) * (1 / EXACT.FOOT_M) * (9 / 5) },
+      { id: "BTUitinhft2F", name: "BTU(IT)-tommer per time-kvadratfot-grad Fahrenheit [BTU(IT)·in/(h·ft²·°F)]",
+        factor: (EXACT.BTU_IT_J / 3600) * (EXACT.INCH_M / (EXACT.FOOT_M * EXACT.FOOT_M)) * (9 / 5) },
+      { id: "calscmC",     name: "Kalori per sekund-centimeter-grad Celsius [cal/(s·cm·°C)]",
+        factor: 4.184 / 0.01 },
+      { id: "ftlbfinhft2F", name: "Fot-pund-tommer per time-kvadratfot-grad Fahrenheit [ft·lbf·in/(h·ft²·°F)]",
+        factor: (EXACT.LBF_N * EXACT.INCH_M * (9 / 5)) / (3600 * EXACT.FOOT_M) },
+      { id: "Jmmminm2C",   name: "Joule-meter per minutt-kvadratmeter-grad Celsius [J·m/(min·m²·°C)]",
+        factor: 1 / 60 },
+      { id: "kcalmhC",     name: "Kilokalori per meter-time-grad Celsius [kcal/(m·h·°C)]",
+        factor: 4186.8 / 3600 },
+      { id: "lbmins3F",    name: "Pund-masse-tommer per kubikksekund-grad Fahrenheit [lbm·in/(s³·°F)]",
+        factor: EXACT.POUND_KG * EXACT.INCH_M * (9 / 5) },
     ],
 
     /* Base unit: W/(m²·K) */
