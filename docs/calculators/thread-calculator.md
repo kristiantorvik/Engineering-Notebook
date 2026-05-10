@@ -2,10 +2,8 @@
 title: Gjengekalkulator
 summary: Bereknar gevinddimensjonar, toleransar og mål over trådar for ISO metrisk (60°) og NPT rørgjenge.
 tags:
-  - Gjengar
-  - ISO metrisk
-  - NPT
-  - Toleransar
+  - Gjenger
+  - Toleranser
   - Maskinering
 type: kalkulator
 search_words: thread gjenge bolt skrue fitting rørkopling gevind toleranse boring drill
