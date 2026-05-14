@@ -16,6 +16,48 @@
     // A4 portrait at 96 CSS dpi, minus 1.5cm margins each side and 1em padding
     var NB_PRINT_WIDTH = 640;
 
+    // Hide "## For copy/paste" sections (heading + everything until next H2)
+    // when printing. Pure CSS can't span "this heading and the next N siblings",
+    // and the markdown source has no wrapper class to target, so do it in JS.
+    function nbHidePrintSections() {
+      var typeset = document.querySelector('.md-typeset');
+      if (!typeset) return;
+
+      typeset.querySelectorAll('h2').forEach(function (h) {
+        // mkdocs-material injects an anchor link inside every heading — strip
+        // it before comparing text.
+        var clone = h.cloneNode(true);
+        var anchor = clone.querySelector('.headerlink');
+        if (anchor) anchor.remove();
+        if (clone.textContent.trim().toLowerCase() !== 'for copy/paste') return;
+
+        // Hide the preceding <hr> (every copy/paste section is preceded by
+        // `---` in the markdown — leaving it would look like an orphan rule).
+        var prev = h.previousElementSibling;
+        if (prev && prev.tagName === 'HR') {
+          prev.dataset.nbPrintHidden = '1';
+          prev.style.display = 'none';
+        }
+
+        // Hide the heading itself, then walk siblings until the next H2.
+        h.dataset.nbPrintHidden = '1';
+        h.style.display = 'none';
+        var sib = h.nextElementSibling;
+        while (sib && sib.tagName !== 'H2') {
+          sib.dataset.nbPrintHidden = '1';
+          sib.style.display = 'none';
+          sib = sib.nextElementSibling;
+        }
+      });
+    }
+
+    function nbRestorePrintSections() {
+      document.querySelectorAll('[data-nb-print-hidden]').forEach(function (el) {
+        el.style.display = '';
+        delete el.dataset.nbPrintHidden;
+      });
+    }
+
     function nbApplyPrintZoom() {
       var typeset = document.querySelector('.md-typeset');
       if (!typeset) return;
@@ -35,10 +77,14 @@
       }
     }
 
-    window.addEventListener('beforeprint', nbApplyPrintZoom);
+    window.addEventListener('beforeprint', function () {
+      nbHidePrintSections();   // must run first — zoom measures visible elements
+      nbApplyPrintZoom();
+    });
     window.addEventListener('afterprint', function () {
       var typeset = document.querySelector('.md-typeset');
       if (typeset) typeset.style.zoom = '';
+      nbRestorePrintSections();
     });
 
     // Floating print button — let beforeprint handle zoom, so measurement is in print-mode layout

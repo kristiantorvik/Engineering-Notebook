@@ -5,7 +5,7 @@ tags:
   - Termodynamikk
   - Prosesser
   - Varmepumpe
-type: note
+type: notat
 search_words:
 updated: 2026-03-27
 ---

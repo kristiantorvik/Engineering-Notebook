@@ -1,6 +1,6 @@
 ---
 title: Potensregler
-summary: Generelle regler for potenser
+summary: Generelle regler for potenser og røtter
 tags:
   - Matematikk
   - Regneregler
@@ -28,6 +28,17 @@ $\Large (a^x)^y = a^{x \cdot y}$
 $\,$
 
 $\Large a^{\frac{x}{y}} = \sqrt[y]{a^x}$
+
+$\,$
+
+$\Large \sqrt[n]{a \cdot b} = \sqrt[n]{a} \cdot \sqrt[n]{b}$
+
+$\,$
+
+$\Large \sqrt[n]{\dfrac{a}{b}} = \dfrac{\sqrt[n]{a}}{\sqrt[n]{b}}$
+
+$\,$
+
 
 
 ---
@@ -62,5 +73,17 @@ $$
 ```Markdown
 $$
 a^{\frac{x}{y}} = \sqrt[y]{a^x}
+$$
+```
+
+```Markdown
+$$
+\sqrt[n]{a \cdot b} = \sqrt[n]{a} \cdot \sqrt[n]{b}
+$$
+```
+
+```Markdown
+$$
+\sqrt[n]{\dfrac{a}{b}} = \dfrac{\sqrt[n]{a}}{\sqrt[n]{b}}
 $$
 ```

@@ -117,4 +117,4 @@ Empirisk formel for når søylen ligger en plass mellom plastisk og elsastisk kn
 
 $$\large \text{Tetmajers kritisk spenning}\quad \boxed{\sigma_{c \ r} = \dfrac{\sigma_f}{1 + \dfrac{\lambda^2 \ \sigma_f}{\pi^2 E}}}$$
 
-[text](knekking.md)**OBS ikkje samme konstanter som tetmajer**
+**OBS ikkje samme konstanter som tetmajer**
