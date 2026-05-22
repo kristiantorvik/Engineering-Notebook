@@ -70,6 +70,9 @@ nav:
       - Termodynamiske prosesser: notes/termodynamiske-prosesser.md
       - Termodynamiske egenskaper: notes/termodynamiske-egenskaper.md
       - Treghetsmoment og motstandsmoment: notes/treghetsmoment-motstandsmoment.md
+      - Derivasjon: notes/derivasjon.md
+      - Integrasjon: notes/integrasjon.md
+      - Partiell derivasjon: notes/partiell-derivasjon.md
   - Formler:
       - formulas/index.md
       - Geometrisk slankhet: formulas/geometrisk-slankhet.md
