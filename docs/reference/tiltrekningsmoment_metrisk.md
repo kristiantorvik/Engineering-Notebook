@@ -4,7 +4,6 @@ summary: Tabell med tiltrekningsmoment for metriske skruer og bolter. Søkeord T
 tags:
   - Engineering
   - Gjenger
-  - fasteners
 type: referanse
 search_words: M
 updated: 2026-03-22

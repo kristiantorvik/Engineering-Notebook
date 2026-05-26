@@ -3,11 +3,10 @@ title: Tommebrøk fra mm
 summary: Finn nærmaste tommebrøk for eit mål i millimeter eller desimaltommer. Nyttig ved reverse engineering av gammelt utstyr laga i tommer.
 tags:
   - Konvertering
-  - Tommer
   - Imperial
   - Brøk
 type: kalkulator
-search_words: inch fraction imperial brøk tommer mål desimaltommer omrekne
+search_words: inch fraction imperial brøk tommer mål desimaltommer omrekne, tommer
 updated: 2026-04-10
 ---
 

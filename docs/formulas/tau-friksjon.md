@@ -4,7 +4,6 @@ summary: Berekner forholdet mellom krefter over et reimhjul.
 tags:
   - Styrkeberegning
   - Engineering
-  - Kabel
   - Reim
   - Friksjon
 type: formel

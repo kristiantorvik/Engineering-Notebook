@@ -4,11 +4,9 @@ summary: Konverter mellom enheter i nærmest alle kategorier som Temperatur, Len
 tags:
   - Konvertering
   - Enheter
-  - Lengde
-  - Masse
-  - Temperatur
+  - Imperial
 type: kalkulator
-search_words: Enhet, unit,
+search_words: Enhet, unit, Areal, arealmoment, dreiemoment, drivstoffsforbruk, effekt, energi, Fart, frekvens, kraft, lengde, masse, temperatur, ekspansjon, termisk ekspansjon, tetthet, tid, trykk, varmeledning, vinkel, viskositet, volum
 updated: 2026-04-22
 ---
 

@@ -2,7 +2,7 @@
 title: AWG - mm² Kabelstørrelse
 summary: Tabeller for konvertering mellom American Wire Guage og kvardratmillimeter, mm^2
 tags:
-  - Elektro
+  - Elektrisk
 type: referanse
 search_words: Kabel, diameter, guage
 updated: 2026-04-06

@@ -4,7 +4,6 @@ summary: Typiske friksjonstall for bolter og skruer både i gjenger og under skr
 tags:
   - Engineering
   - Gjenger
-  - fasteners
   - Friksjon
 type: referanse
 search_words: 
