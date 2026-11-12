@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 320" font-family="Roboto Mono, monospace" font-size="15">
+  <!-- Rent skjær på eit kvadratisk element. Bunnen står fast, toppen blir skyvd δ til høgre. -->
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9e9e9e"/>
+    </marker>
+  </defs>
+
+  <!-- Opphavleg kvadrat (stipla) -->
+  <rect x="110" y="80" width="160" height="160" fill="none" stroke="#9e9e9e" stroke-width="1.5" stroke-dasharray="6 5"/>
+
+  <!-- Deformert element (rombe) -->
+  <polygon points="110,240 270,240 310,80 150,80" fill="#9e9e9e" fill-opacity="0.12" stroke="#9e9e9e" stroke-width="2.5"/>
+
+  <!-- Diagonalar -->
+  <line x1="110" y1="240" x2="310" y2="80" stroke="#4fc3f7" stroke-width="3"/>
+  <line x1="270" y1="240" x2="150" y2="80" stroke="#ff8a65" stroke-width="3"/>
+
+  <!-- Skjærspenningar τ -->
+  <line x1="175" y1="58" x2="295" y2="58" stroke="#9e9e9e" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="245" y1="262" x2="125" y2="262" stroke="#9e9e9e" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="292" y1="225" x2="323" y2="104" stroke="#9e9e9e" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="128" y1="95" x2="97" y2="216" stroke="#9e9e9e" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="228" y="48" fill="#9e9e9e">τ</text>
+  <text x="180" y="284" fill="#9e9e9e">τ</text>
+  <text x="332" y="170" fill="#9e9e9e">τ</text>
+  <text x="80" y="160" fill="#9e9e9e">τ</text>
+
+  <!-- δ og γ -->
+  <line x1="110" y1="72" x2="150" y2="72" stroke="#9e9e9e" stroke-width="1.2"/>
+  <line x1="110" y1="67" x2="110" y2="77" stroke="#9e9e9e" stroke-width="1.2"/>
+  <line x1="150" y1="67" x2="150" y2="77" stroke="#9e9e9e" stroke-width="1.2"/>
+  <text x="122" y="96" fill="#9e9e9e" font-size="13">δ</text>
+  <path d="M110,180 A60,60 0 0,1 124.6,181.8" fill="none" stroke="#9e9e9e" stroke-width="1.5"/>
+  <text x="112" y="172" fill="#9e9e9e" font-size="13">γ</text>
+  <text x="186" y="234" fill="#9e9e9e" font-size="13">a</text>
+
+  <!-- Forklaring -->
+  <line x1="350" y1="235" x2="375" y2="235" stroke="#4fc3f7" stroke-width="3"/>
+  <text x="380" y="231" fill="#4fc3f7" font-size="12">strekk</text>
+  <text x="380" y="246" fill="#4fc3f7" font-size="12">(lengre)</text>
+  <line x1="350" y1="275" x2="375" y2="275" stroke="#ff8a65" stroke-width="3"/>
+  <text x="380" y="271" fill="#ff8a65" font-size="12">trykk</text>
+  <text x="380" y="286" fill="#ff8a65" font-size="12">(kortare)</text>
+</svg>

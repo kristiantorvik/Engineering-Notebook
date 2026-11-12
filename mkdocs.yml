@@ -92,6 +92,8 @@ nav:
       - Plan rørsle av stive legemer — krefter og akselerasjon: formulas/plan-rørsle-stive-legemer.md
       - Bernoullis formel: formulas/bernoullis.md
       - Vridning av aksel: formulas/vridning-aksel.md
+      - Skjærmodul frå E-modul og Poissons tal: formulas/skjærmodul.md
+      - Hydraulisk effekt (trykk og flow til kW): formulas/hydraulisk-effekt.md
       - ABC formelen: formulas/abc-formelen.md
       - Ohms lov: formulas/ohms-lov.md
       - Elektrisk effekt: formulas/elektrisk-effekt.md
@@ -118,6 +120,7 @@ nav:
       - Tiltrekningsmoment — metriske skruer: reference/tiltrekningsmoment_metrisk.md
       - Logarimeregler: reference/logaritmeregler.md
       - Potensregler: reference/potensregler.md
+      - Volumformler: reference/volumformler.md
       - AWG-mm2-kabelstørrelse: reference/AWG-mm2-kabelstørrelse.md
       - Trigonometriske identiteter: reference/trigonometriske_identiteter.md
       - Formelsamling Dynamikk (PDF): reference/formelsamling-dynamikk.md
