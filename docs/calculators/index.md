@@ -13,11 +13,11 @@ Browser-side tools for common engineering calculations.
 | [Press passninger](press-fit-calculator.md) | Berekner kontaktrykk, deformasjoner og spenningar ved bruk av Lamé's formlar. |
 | [Strømningshastighet i rør](flow-speed-calculator.md) | Berekner strømningshastighet for vatn i rør basert på volumstraum og rørdimensjon. |
 | [Enhetskonvertering](unit-converter.md) | Konverter mellom enheter i nærmest alle kategorier som: Temperatur, Lengde, Masse, Tetthet, Energi, Effekt, Fart, Volum, Areal, Gjennomstrømning, Vinkel, Drivstofforbruk, Tid, Trykk, Dreiemoment, Kraft, Frekvens, Digital lagring, varmeledningsevne, varmeovergangstall, termisk ekspansjonskoeffisient, arealtreghetsmoment, massetreghetsmoment og viskositet. |
+| [Bjelkekalkulator](bjelkekalkulator.md) | Nedbøying, bøyemoment og bøyespenning for bjelkar med ulike opplagringar, med standard stålprofil eller eigne tverrsnittsmål. |
 
 ---
 
 ### Kalkulatorer planlagt
 
-- Nedbøy og spenning av standard profiler
 - Varmekapasitet
 

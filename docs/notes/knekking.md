@@ -70,6 +70,8 @@ $i = \sqrt{\dfrac{I}{A}} =$ Treghetsradius
 og kalt andre arealmoment er integralet av avstanden fra en akse. Altså summen av areal gangen med avstanden fra aksen.
 $I_x = \int y^2 dA$
 
+Tabellverdiar for $I$, $i$ og $A$ for standard stålprofil står i [Ståltabeller](../reference/staalprofiler-tabeller.md). Formlar for andre tverrsnitt: [Treghetsmoment og motstandsmoment](treghetsmoment-motstandsmoment.md).
+
 
 ___
 ## Elastisk knekking

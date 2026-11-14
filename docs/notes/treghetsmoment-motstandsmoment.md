@@ -16,6 +16,8 @@ updated: 2026-03-31
 
 Det finst fleire storleikar med liknande navn og symbol som lett kan forvekslast — særleg når ein finn formlar på nett der omgrepa ofte er blanda saman. Dette notatet gir ei oversikt over alle dei vanlege typane, kva dei betyr, og korr dei blir brukt og formler på vanlige tversnitt.
 
+**Relatert:** Ferdige tabellverdiar for $I$ og $W$ for standard stålprofil (IPE, HE-A, HE-B, hulprofil, rør, U, L) står i [Ståltabeller](../reference/staalprofiler-tabeller.md). Nedbøying og bøyespenning i bjelkar: [Bjelkeformlar](bjelkeformlar.md) og [Bjelkekalkulator](../calculators/bjelkekalkulator.md).
+
 ---
 
 ---

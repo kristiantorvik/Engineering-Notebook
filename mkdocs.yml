@@ -76,6 +76,7 @@ nav:
       - Integrasjon: notes/integrasjon.md
       - Partiell derivasjon: notes/partiell-derivasjon.md
       - Kilereimer: notes/kilereimer.md
+      - Bjelkeformlar — nedbøying og spenning: notes/bjelkeformlar.md
   - Formler:
       - formulas/index.md
       - Geometrisk slankhet: formulas/geometrisk-slankhet.md
@@ -115,9 +116,11 @@ nav:
       - Rørstrøm og pumpe: calculators/pipe-flow-calculator.md
       - Gjengekalkulator: calculators/thread-calculator.md
       - Fraksjonskalkulator: calculators/tommer-fraksjonskalkulator.md
+      - Bjelkekalkulator: calculators/bjelkekalkulator.md
   - Referanse-data:
       - reference/index.md
       - Material-egenskaper: reference/material-egenskaper.md
+      - Ståltabeller — stålprofil: reference/staalprofiler-tabeller.md
       - Friksjon — bolter og skruer: reference/friksjon-bolter-skruer.md
       - Tiltrekningsmoment — metriske skruer: reference/tiltrekningsmoment_metrisk.md
       - Logarimeregler: reference/logaritmeregler.md
