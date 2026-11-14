@@ -524,7 +524,6 @@ Betegnelse f.eks.: Kranskinne DIN 536 A 65, Stål NS-EN 10 025 …
 | A100 |     100 |     200 |      12 |      95 |          75.2 |         9.56 |                     8.88 |                      170 |                     13.6 |                      136 |                42.9 |                        1000 |
 | A120 |     120 |     220 |      14 |     105 |         101.3 |         12.9 |                     14.2 |                      249 |                     23.7 |                      215 |                48.0 |                        1200 |
 
-<sub>Kilde: bokens side 23.</sub>
 
 ## Tabell 1.14 – Flate kranskinner
 

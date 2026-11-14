@@ -390,3 +390,58 @@ mark.nb-hl {
 .calc-card button:hover {
   opacity: 0.85;
 }
+
+/* ── GPS / toleransenotasjon (prefix gt-) ───────────────────────────
+   Brukt i notes/toleransesetting.md for å teikne toleranserammer,
+   modifikatorar og TED-mål som vanleg tekst.                        */
+.md-typeset .gt-fcf {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1.5px solid currentColor;
+  line-height: 1.5;
+  white-space: nowrap;
+  vertical-align: middle;
+  margin: 1px 0;
+}
+.md-typeset .gt-fcf > span { padding: 0 0.45em; }
+.md-typeset .gt-fcf > span + span { border-left: 1.5px solid currentColor; }
+
+/* Geometriske symbol: desse teikna manglar i Roboto Mono */
+.md-typeset .gt-sym {
+  font-family: "Segoe UI Symbol", "Noto Sans Symbols", "Noto Sans Symbols 2",
+               "Apple Symbols", "DejaVu Sans", "Cambria Math", sans-serif;
+  font-size: 1.15em;
+  line-height: 1;
+}
+
+/* Bokstav i sirkel: Ⓜ Ⓛ Ⓔ Ⓡ Ⓟ … */
+.md-typeset .gt-c {
+  display: inline-block;
+  min-width: 1.5em;
+  height: 1.5em;
+  line-height: 1.38em;
+  font-size: 0.82em;
+  text-align: center;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  vertical-align: baseline;
+}
+
+/* Bokstavar i avlang ramme: storleiksmodifikatorar (GG, LP, GX …) */
+.md-typeset .gt-m {
+  display: inline-block;
+  padding: 0 0.4em;
+  line-height: 1.38em;
+  font-size: 0.82em;
+  border: 1.5px solid currentColor;
+  border-radius: 0.8em;
+  white-space: nowrap;
+}
+
+/* Teoretisk eksakt mål (TED) */
+.md-typeset .gt-ted {
+  display: inline-block;
+  padding: 0 0.35em;
+  line-height: 1.4;
+  border: 1.5px solid currentColor;
+}

@@ -77,6 +77,7 @@ nav:
       - Partiell derivasjon: notes/partiell-derivasjon.md
       - Kilereimer: notes/kilereimer.md
       - Bjelkeformlar — nedbøying og spenning: notes/bjelkeformlar.md
+      - Toleransesetting — ISO GPS: notes/toleransesetting.md
   - Formler:
       - formulas/index.md
       - Geometrisk slankhet: formulas/geometrisk-slankhet.md
