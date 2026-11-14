@@ -63,6 +63,8 @@ Masse er regnet med 7850 kg/m³, altså masse [kg/m] = 7.85 · A [10³ mm²].
 - Avvik fra boken
 - Slik er tallene kontrollert
 
+<div class="nb-compact-tables nb-print-landscape" markdown="1">
+
 ## Tabell 1.1 – Varmvalsede IPE-bjelker
 
 ![IPE-bjelke: mål, akser og hullavstand](../assets/staalprofiler-tabeller/figurer/ipe.svg)
@@ -502,7 +504,7 @@ Materiale etter NS-EN 10 025
 | 133     |       4 |          12.7 |     1620 |         3.38 |         50.8 |    45.6 |
 | 139.7   |       4 |          13.4 |     1710 |         3.93 |         56.2 |    48.0 |
 
-Konferer leverandørenes lagerlister for tilgjengelige rørdimensjoner.
+
 
 
 ## Tabell 1.13 – Kranskinner
@@ -537,6 +539,7 @@ Materiale S 355 JO vanlig lagerført kvalitet
 | 60x40 |      60 |      40 |      10 |          18.8 |
 | 70x40 |      70 |      40 |      10 |          22.0 |
 
+</div>
 
 
 ## Slik er tallene kontrollert

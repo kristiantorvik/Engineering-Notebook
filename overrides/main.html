@@ -13,6 +13,15 @@
       }
     });
 
+    // Pages that opt in to landscape printing (an element with class
+    // nb-print-landscape, see extra.css): override the default portrait @page
+    // for the whole document. Appended last in <head> so it wins over extra.css.
+    if (document.querySelector('.nb-print-landscape')) {
+      var nbLandscape = document.createElement('style');
+      nbLandscape.textContent = '@page { size: A4 landscape; margin: 1cm; }';
+      document.head.appendChild(nbLandscape);
+    }
+
     // A4 portrait at 96 CSS dpi, minus 1.5cm margins each side and 1em padding
     var NB_PRINT_WIDTH = 640;
 
@@ -61,6 +70,10 @@
     function nbApplyPrintZoom() {
       var typeset = document.querySelector('.md-typeset');
       if (!typeset) return;
+      // Pages that opt in to landscape printing (class nb-print-landscape) set
+      // fixed print sizes in extra.css so the result doesn't depend on window
+      // width — don't zoom those.
+      if (document.querySelector('.nb-print-landscape')) return;
       typeset.style.zoom = '';
       void typeset.offsetWidth; // flush so offsetWidth reads are fresh
 

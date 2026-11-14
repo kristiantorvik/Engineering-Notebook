@@ -269,6 +269,62 @@ mark.nb-hl {
   padding: 0 1px;
 }
 
+/* ── Compact data tables ─────────────────────────────────────────── */
+/* For wide numeric tables: wrap in <div class="nb-compact-tables" markdown="1">.
+   Removes Material's 5rem minimum column width so each column is only as
+   wide as its content. */
+.md-typeset .nb-compact-tables table:not([class]) th,
+.md-typeset .nb-compact-tables table:not([class]) td {
+  min-width: 0;
+  padding: 0.4em 0.8em;
+  white-space: nowrap;
+}
+
+/* Print: pages containing .nb-print-landscape print in A4 landscape. The
+   script in overrides/main.html adds the landscape @page rule for those pages
+   (a plain @page, so every sheet gets the same orientation in all browsers)
+   and skips its print-zoom, so the sizes below are what ends up on paper
+   regardless of browser window width. */
+
+/* Print: each table section (h2 + figure + table) starts on a new page. */
+@media print {
+  .md-typeset .nb-compact-tables h2 { break-before: page; clear: both; margin-top: 0; }
+  .md-typeset .nb-compact-tables tr { break-inside: avoid; }
+
+  /* Fixed print sizes, chosen so the longest table fits one landscape page. */
+  .md-typeset:has(.nb-print-landscape) { font-size: 11px; }
+  .md-typeset .nb-compact-tables table:not([class]) {
+    font-size: 9.5px;
+    line-height: 1.35;
+  }
+  .md-typeset .nb-compact-tables table:not([class]) th,
+  .md-typeset .nb-compact-tables table:not([class]) td {
+    padding: 0.2em 0.45em;
+  }
+
+  /* Landscape pages are short: put the section figure to the right of the
+     description instead of above the table. (Don't pull it up beside the
+     heading with a negative offset — Chrome then paints part of it on the
+     previous page.) */
+  .md-typeset .nb-compact-tables h2 + p:has(> img) { float: right; margin: 0 0 0.3em 1em; }
+  .md-typeset .nb-compact-tables h2 + p > img {
+    height: 3.2cm !important;
+    width: auto;
+    max-width: none !important;
+  }
+  .md-typeset .nb-compact-tables .md-typeset__scrollwrap { clear: both; }
+
+  /* Tables with 30+ rows get smaller text so they still fit on one page. */
+  .md-typeset .nb-compact-tables table:not([class]):has(tbody tr:nth-child(30)) {
+    font-size: 8.3px;
+    line-height: 1.15;
+  }
+  .md-typeset .nb-compact-tables table:not([class]):has(tbody tr:nth-child(30)) th,
+  .md-typeset .nb-compact-tables table:not([class]):has(tbody tr:nth-child(30)) td {
+    padding: 0.05em 0.45em;
+  }
+}
+
 /* Tighten up formula variable tables */
 .md-typeset table:not([class]) th,
 .md-typeset table:not([class]) td {
