@@ -118,10 +118,13 @@ nav:
       - Gjengekalkulator: calculators/thread-calculator.md
       - Fraksjonskalkulator: calculators/tommer-fraksjonskalkulator.md
       - Bjelkekalkulator: calculators/bjelkekalkulator.md
+      - Pasningsvelger — ISO 286: calculators/pasningsvelger.md
   - Referanse-data:
       - reference/index.md
       - Material-egenskaper: reference/material-egenskaper.md
       - Ståltabeller — stålprofil: reference/staalprofiler-tabeller.md
+      - Kiler og kilspor — DIN 6885: reference/kiler-og-kilspor.md
+      - Toleranser og pasninger — ISO 286: reference/iso-286-toleranser.md
       - Friksjon — bolter og skruer: reference/friksjon-bolter-skruer.md
       - Tiltrekningsmoment — metriske skruer: reference/tiltrekningsmoment_metrisk.md
       - Logarimeregler: reference/logaritmeregler.md
